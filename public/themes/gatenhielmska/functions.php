@@ -34,8 +34,6 @@ function add_theme_caps()
 }
 add_action('admin_init', 'add_theme_caps');
 
-require get_template_directory() . "/post-types/events.php";
-require get_template_directory() . "/fields/events.php";
 
 
 require get_template_directory() . "/plate.php";
