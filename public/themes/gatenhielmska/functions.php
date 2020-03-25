@@ -23,5 +23,5 @@ add_action('wp_enqueue_scripts', function () {
 });
 
 require get_template_directory() . "/plate.php";
-require get_template_directory() . "/post-types/events.php";
-require get_template_directory() . "/fields/events.php";
+require get_template_directory() . "/post-types/event.php";
+require get_template_directory() . "/fields/event.php";
