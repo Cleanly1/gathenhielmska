@@ -6,5 +6,4 @@ upgrade
 uploads
 wordpress
 
-fields
-post-types
+.DS_Store
