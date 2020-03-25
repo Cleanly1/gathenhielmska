@@ -20,7 +20,9 @@
             <ul class="navbar-nav mr-auto">
                 <?php foreach (get_pages(['sort_column' => 'menu_order']) as $page) { ?>
                     <li class="nav-item">
-                        <a class="nav-link <?php echo is_home() && $page->ID == get_option('page_for_posts') || is_page($page->ID) ? 'active' : "" ?>" href="<?php echo get_permalink($page) ?>"><?php echo ($page->post_title); ?></a>
+                        <a class="nav-link <?php if (is_home() && $page->ID === get_option('page_for_posts') || is_page($page->ID)) {
+                                                echo 'active';
+                                            } ?>" href="<?php echo get_permalink($page) ?>"><?php echo ($page->post_title); ?></a>
                     </li>
                 <?php } ?>
             </ul>
