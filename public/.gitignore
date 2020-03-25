@@ -5,3 +5,5 @@ plugins/*
 upgrade
 uploads
 wordpress
+
+.DS_Store

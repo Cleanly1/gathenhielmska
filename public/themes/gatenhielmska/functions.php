@@ -22,4 +22,18 @@ add_action('wp_enqueue_scripts', function () {
     wp_enqueue_script('script', get_template_directory_uri() . '/assets/scripts/app.js');
 });
 
+function add_theme_caps()
+{
+    remove_role('editor');
+    remove_role('author');
+    remove_role('contributor');
+    add_role('inhouse', 'In-House');
+
+    $inhouse = get_role('inhouse');
+    $inhouse->add_cap('can_edit_posts');
+}
+add_action('admin_init', 'add_theme_caps');
+
+
+
 require get_template_directory() . "/plate.php";
