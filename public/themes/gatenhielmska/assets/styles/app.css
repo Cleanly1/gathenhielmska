@@ -1,7 +1,11 @@
 /* WordPlate */
 
 :root {
+  --lightPink: #FFEDE9;
   --darkBlue: #12495F;
+  --darkGreen: #112E33;
+  --darkPink: #EDC8BF;
+  --white: #FFFFFF;
 }
 
 .event {

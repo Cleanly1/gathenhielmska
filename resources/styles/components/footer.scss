@@ -1,0 +1,91 @@
+.footer {
+  position: static;
+  bottom: 0;
+  width: 100vw;
+  display: flex;
+  flex-flow: row nowrap;
+  background-color: var(--darkBlue);
+  padding: 0;
+  margin: 0;
+  font-family: Avenir Next Condensed;
+  font-style: normal;
+  font-weight: normal;
+  color: white;
+
+  &_logo {
+    width: 17vw;
+    margin: 0;
+  }
+
+  &_parts {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-end;
+    width: calc(100vw/3);
+
+    &:first-child {
+      padding: 0 0 10px 40px;
+    }
+
+    &:nth-child(2) {
+      justify-content: flex-end;
+      align-items: center;
+    }
+  }
+
+  &_list{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 20px;
+    margin-left: 6vw;
+
+    &_item{
+      font-size: 16px;
+      margin: 0 10px 10px 0;
+    }
+    &_item a {
+      color: white;
+    }
+    &_item a:hover{
+      color: gainsboro;
+    }
+  }
+
+  &_copy {
+    margin: 0;
+    margin-left: 6vw;
+    line-height: 40px;
+  }
+
+  &_social {
+    margin: 0 0 18px 0;
+    padding: 0;
+
+    &_item{
+    margin: 2vw;
+
+      &_images{
+        width: 50px;
+      }
+    }
+  }
+
+  &_info {
+    color: white;
+    font-size: 12px;
+    margin: 0 1.5vw;
+
+    &:hover{
+      color: gainsboro;
+    }
+  }
+
+  &_flower {
+    width: 30vw;
+    align-self: flex-end;
+  }
+
+}
+
+

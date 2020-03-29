@@ -11,8 +11,7 @@ add_action('init', function () {
             'singular_name' => __('Event'),
         ],
         'supports' => [
-            'title',
-            'thumbnail',
+            'title'
         ],
         'menu_icon' => 'dashicons-groups',
         'menu_position' => 20,
