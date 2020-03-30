@@ -11,10 +11,12 @@
             <li class="footer_list_item"><a href="">Tillgänglighet</a></li>
             <li class="footer_list_item"><a href="">Om Gatenhielmska</a></li>
         </ul>
-        <p class="footer_copy"><span class="hideOnMobile">Stigbergstorget 7, 414 63 Göteborg</span> <br>
-            © 2020 Gathenhielmska Huset </p>
+        <div class="hideOnMobile">
+            <p class="footer_copy">Stigbergstorget 7, 414 63 Göteborg <br>
+                © 2020 Gathenhielmska Huset </p>
+        </div>
     </div>
-    <div class="footer_parts">
+    <div class="footer_parts hideOnMobile">
         <ul class="footer_social">
             <a class="footer_social_item" href=""><img class="footer_social_item_images" src="/themes/gatenhielmska/assets/images/facebook.svg" alt="facebook"></a>
             <a class="footer_social_item" href=""><img class="footer_social_item_images" src="/themes/gatenhielmska/assets/images/instagram.svg" alt="instagram"></a>
@@ -23,9 +25,18 @@
         <ul class="footer_social"><a class="footer_info" href="">Om Webbplatsen</a> / <a class="footer_info" href="">Personuppgifter</a> / <a class="footer_info" href="">Allmänna Villkor</a></ul>
     </div>
     <div class="footer_parts">
-
+        <ul class="footer_social hideOnDesktop">
+            <a class="footer_social_item" href="hej.se">Instagram</a>
+            <a class="footer_social_item" href="">Facebook</a>
+            <a class="footer_social_item" href="">Twitter</a>
+        </ul>
         <img class="footer_flower" src="/themes/gatenhielmska/assets/images/blomma.png" alt="">
+
     </div>
+
+    <p class="footer_copy hideOnDesktop">© 2020 Gathenhielmska Huset </p>
+
+    <img class="footer_wave hideOnDesktop" src="/themes/gatenhielmska/assets/images/waveFooter.svg" alt="">
 
 </div>
 <?php wp_footer(); ?>
