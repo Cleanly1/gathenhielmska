@@ -120,6 +120,7 @@ body {
 #slider-big-g {
   position: absolute;
   width: 95%;
+  z-index: -1;
 }
 .desktop-menu {
   display: none;
