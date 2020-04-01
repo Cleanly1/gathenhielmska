@@ -108,15 +108,27 @@
 
 /***/ }),
 
+/***/ "./resources/styles/components/footer.scss":
+/*!*************************************************!*\
+  !*** ./resources/styles/components/footer.scss ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+throw new Error("Module build failed (from ./node_modules/css-loader/index.js):\nModuleBuildError: Module build failed (from ./node_modules/sass-loader/dist/cjs.js):\nError: ENOENT: no such file or directory, open '/Users/oskar/Desktop/Yrgo/Projekt/gathenhielmska/resources/styles/components/footer.scss'\n    at /Users/oskar/Desktop/Yrgo/Projekt/gathenhielmska/node_modules/webpack/lib/NormalModule.js:316:20\n    at /Users/oskar/Desktop/Yrgo/Projekt/gathenhielmska/node_modules/loader-runner/lib/LoaderRunner.js:367:11\n    at /Users/oskar/Desktop/Yrgo/Projekt/gathenhielmska/node_modules/loader-runner/lib/LoaderRunner.js:203:19\n    at /Users/oskar/Desktop/Yrgo/Projekt/gathenhielmska/node_modules/enhanced-resolve/lib/CachedInputFileSystem.js:85:15\n    at processTicksAndRejections (internal/process/task_queues.js:79:11)");
+
+/***/ }),
+
 /***/ 0:
-/*!********************************************************************!*\
-  !*** multi ./resources/scripts/app.js ./resources/styles/app.scss ***!
-  \********************************************************************/
+/*!**************************************************************************************************************!*\
+  !*** multi ./resources/scripts/app.js ./resources/styles/app.scss ./resources/styles/components/footer.scss ***!
+  \**************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! /Users/oskar/Desktop/Yrgo/Projekt/gathenhielmska/resources/scripts/app.js */"./resources/scripts/app.js");
-module.exports = __webpack_require__(/*! /Users/oskar/Desktop/Yrgo/Projekt/gathenhielmska/resources/styles/app.scss */"./resources/styles/app.scss");
+__webpack_require__(/*! /Users/oskar/Desktop/Yrgo/Projekt/gathenhielmska/resources/styles/app.scss */"./resources/styles/app.scss");
+module.exports = __webpack_require__(/*! /Users/oskar/Desktop/Yrgo/Projekt/gathenhielmska/resources/styles/components/footer.scss */"./resources/styles/components/footer.scss");
 
 
 /***/ })

@@ -1,0 +1,159 @@
+body {
+  margin-top: 112px;
+}
+
+.navbarnew {
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  width: 100vw;
+  height: 90px;
+  background-color: var(--white);
+  z-index: 100;
+}
+.navbar-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 17px;
+}
+#logo {
+  width: 150px;
+}
+
+#logo path {
+  fill: var(--darkBlue);
+}
+
+.burger-menu {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.burger-menu-bar {
+  height: 2.5px;
+  width: 40px;
+  background-color: var(--darkBlue);
+  border-radius: 2px;
+  transition: all 0.2s ease;
+}
+
+.burger-menu-bar::after,
+.burger-menu-bar::before {
+  content: "";
+  position: absolute;
+  height: 2.5px;
+  width: 40px;
+  background-color: var(--darkBlue);
+  border-radius: 2px;
+  transition: transform 0.2s ease;
+}
+
+.burger-menu-bar::after {
+  transform: translateY(12.5px);
+}
+
+.burger-menu-bar::before {
+  transform: translateY(-12.5px);
+}
+
+/* ANIMATION */
+
+.burger-menu.open .burger-menu-bar {
+  background-color: transparent;
+}
+.burger-menu.open .burger-menu-bar::after {
+  transform: rotate(45deg);
+}
+.burger-menu.open .burger-menu-bar::before {
+  transform: rotate(-45deg);
+}
+
+/* MENU_SLIDER */
+
+.slider-menu {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: calc(100vh - 90px);
+  background-color: var(--white);
+  z-index: 50;
+  transition: all 0.3s ease-in-out;
+  padding: 10px;
+  left: 100%;
+}
+.slider-menu ul {
+  position: absolute;
+  top: 30px;
+  list-style-type: none;
+  color: black;
+}
+.slider-menu ul li {
+  padding: 10px;
+}
+.slider-menu ul li a {
+  color: var(--darkBlue);
+  text-transform: uppercase;
+}
+.menu-slider-open {
+  left: 0;
+}
+.flex {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.slider-bird {
+  position: absolute;
+  bottom: 0;
+  width: 350px;
+  height: 350px;
+}
+
+#slider-big-g {
+  position: absolute;
+  width: 95%;
+}
+.desktop-menu {
+  display: none;
+}
+
+@media (min-width: 1025px) {
+  .mobile-container {
+    display: none;
+  }
+
+  #logo path {
+    fill: black;
+  }
+
+  .desktop-menu {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .desktop-menu ul {
+    position: absolute;
+    list-style-type: none;
+    color: black;
+    margin-bottom: 0;
+    right: 17px;
+  }
+  .desktop-menu ul li {
+    display: inline;
+    padding: 10px;
+  }
+  .desktop-menu ul li a {
+    color: black;
+    text-transform: uppercase;
+  }
+}
