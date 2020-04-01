@@ -14,7 +14,7 @@
     <nav class="navbarnew ">
         <div class="navbar-container">
             <!-- Logo -->
-            <a href="#">
+            <a href="/">
                 <svg id="logo" viewBox="0 0 1578 458" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M560.571 282.907C556.022 284.524 550.597 285.367 544.296 285.367C537.894 285.367 532.132 284.019 527.01 281.323C521.922 278.628 517.608 274.786 514.104 269.766C510.6 264.778 507.87 258.814 506.017 251.873C504.13 244.931 503.186 237.248 503.186 228.791C503.186 220.535 504.096 212.953 505.949 206.012C507.769 199.07 510.431 193.106 513.902 188.052C517.373 182.997 521.551 179.088 526.437 176.292C531.323 173.495 536.815 172.08 542.948 172.08C549.351 172.08 554.91 173.225 559.594 175.517C564.278 177.808 568.119 181.043 571.051 185.221L560.504 198.059C556.427 192.163 550.934 189.197 543.993 189.197C540.219 189.197 536.95 190.276 534.12 192.398C531.323 194.521 528.998 197.419 527.178 201.025C525.359 204.664 523.977 208.842 523.067 213.627C522.157 218.412 521.686 223.466 521.686 228.757C521.686 234.249 522.157 239.439 523.067 244.291C523.977 249.143 525.359 253.355 527.178 256.994C528.998 260.6 531.323 263.431 534.12 265.486C536.916 267.541 540.252 268.552 544.128 268.552C546.587 268.552 548.778 268.283 550.766 267.71C552.754 267.137 554.371 266.396 555.584 265.486V237.518H542.443V221.613H572.264V276.505C568.996 279.167 565.087 281.29 560.571 282.907Z" fill="#12495F" />
                     <path d="M640.297 283.076L634.94 260.162H606.5L601.007 283.076H582.677L609.566 174.843H632.952L659.403 283.076H640.297ZM621.158 192.129H620.551L608.791 245.774H632.648L621.158 192.129Z" fill="#12495F" />
@@ -45,9 +45,9 @@
                 <ul>
                     <?php foreach (get_pages(['sort_column' => 'menu_order']) as $page) { ?>
                         <li>
-                            <a <?php if (is_home() && $page->ID === get_option('page_for_posts') || is_page($page->ID)) {
-                                    echo 'active';
-                                } ?>" href="<?php echo get_permalink($page) ?>"><?php echo ($page->post_title); ?></a>
+                            <a class="<?php if (is_home() && $page->ID === get_option('page_for_posts') || is_page($page->ID)) {
+                                            echo 'active';
+                                        } ?>" href="<?php echo get_permalink($page) ?>"><?php echo ($page->post_title); ?></a>
                         </li>
                     <?php } ?>
                 </ul>
@@ -65,9 +65,9 @@
                 <ul>
                     <?php foreach (get_pages(['sort_column' => 'menu_order']) as $page) { ?>
                         <li>
-                            <a <?php if (is_home() && $page->ID === get_option('page_for_posts') || is_page($page->ID)) {
-                                    echo 'active';
-                                } ?>" href="<?php echo get_permalink($page) ?>"><?php echo ($page->post_title); ?></a>
+                            <a class="<?php if (is_home() && $page->ID === get_option('page_for_posts') || is_page($page->ID)) {
+                                            echo 'active';
+                                        } ?>" href="<?php echo get_permalink($page) ?>"><?php echo ($page->post_title); ?></a>
                         </li>
                     <?php } ?>
                 </ul>

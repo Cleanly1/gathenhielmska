@@ -14,6 +14,9 @@
             <?php if (get_field('event_desc')) : ?>
                 <p class="event_desc"><?php the_field('event_desc') ?></p>
             <?php endif; ?>
+            <?php if (get_field('ticket_url')) : ?>
+                <a href="<?php the_field('ticket_url') ?>"> Press here to get a ticket </a>
+            <?php endif; ?>
         </div>
 
 

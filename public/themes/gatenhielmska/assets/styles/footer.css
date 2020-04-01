@@ -92,21 +92,17 @@
   display: none;
 }
 
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 1024px) {
   .footer {
-    flex-flow: column nowrap;
+    flex-flow: row wrap;
     justify-content: center;
     align-items: center;
-    background-image: url("../images/waveFooter.svg");
-    background-repeat: no-repeat;
-    background-position: bottom;
-    background-size: contain;
     padding: 20px 0;
   }
 
   .footer_parts {
     position: static;
-    width: 100vw;
+    width: 50vw;
     padding: 0;
     z-index: 2;
   }
@@ -123,7 +119,7 @@
 
   .footer_list {
     list-style: none;
-    margin: auto 0 auto 15vw;
+    margin: auto 0 auto 10vw;
     padding: 0;
   }
 
@@ -135,9 +131,8 @@
   .footer_social {
     display: flex;
     flex-flow: column nowrap;
-    width: 30vw;
-    margin: 0;
-    padding: 5vh 0 5vh 15vw;
+    margin: auto 0;
+    padding: 5vh 0 5vh 5vw;
   }
 
   .footer_social_item {
@@ -156,13 +151,61 @@
   }
 
   .footer_flower {
-    width: 70vw;
+    width: 40vw;
     align-self: auto;
     transform: rotateY(180deg);
   }
 
   .footer_copy {
     align-self: center;
+  }
+
+  .hide_on_mobile {
+    display: none;
+  }
+
+  .hide_on_desktop {
+    display: flex;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .footer {
+    flex-flow: column nowrap;
+    background-image: url("../images/waveFooter.svg");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: contain;
+  }
+
+  .footer_parts {
+    width: 100vw;
+  }
+
+  .footer_list {
+    margin: auto 0 auto 15vw;
+  }
+
+  .footer_list_item {
+    font-size: 16px;
+    margin: 3vh 0;
+  }
+
+  .footer_social {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 30vw;
+    margin: 0;
+    padding: 5vh 0 5vh 15vw;
+  }
+
+  .footer_social_item {
+    font-size: 16px;
+    margin: 1.5vh 0;
+  }
+
+  .footer_flower {
+    width: 70vw;
   }
 
   .footer_wave {
@@ -172,13 +215,5 @@
     z-index: 1;
     width: 100vw;
     height: 41vh;
-  }
-
-  .hide_on_mobile {
-    display: none;
-  }
-
-  .hide_on_desktop {
-    display: flex;
   }
 }
