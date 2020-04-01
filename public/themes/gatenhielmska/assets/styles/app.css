@@ -1,7 +1,11 @@
 /* WordPlate */
 
 :root {
-  --darkBlue: #12495f;
+  --lightPink: #FFEDE9;
+  --darkBlue: #12495F;
+  --darkGreen: #112E33;
+  --darkPink: #EDC8BF;
+  --white: #FFFFFF;
 }
 
 .event {
@@ -63,3 +67,4 @@
 .preview_event:hover .preview_overlay {
   opacity: 1;
 }
+
