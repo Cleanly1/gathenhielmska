@@ -19,7 +19,9 @@ add_action('wp_enqueue_scripts', function () {
     wp_enqueue_script('bootstrap');
 
     wp_enqueue_style('customstyles', get_stylesheet_directory_uri() . '/assets/styles/app.css');
+    wp_enqueue_style('custom', get_stylesheet_directory_uri() . '/assets/styles/navbar.css');
     wp_enqueue_script('script', get_template_directory_uri() . '/assets/scripts/app.js');
+    wp_enqueue_script('navbar', get_template_directory_uri() . '/assets/scripts/navbar.js', false, false, true);
 });
 
 function add_theme_caps()
