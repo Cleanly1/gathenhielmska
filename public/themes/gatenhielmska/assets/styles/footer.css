@@ -1,5 +1,4 @@
 .footer {
-  align-self: flex-end;
   width: 100vw;
   display: flex;
   flex-flow: row nowrap;
@@ -22,7 +21,7 @@
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-end;
-  width: calc(100vw/3);
+  width: calc(100vw / 3);
 }
 
 .footer_parts:first-child {
@@ -89,7 +88,7 @@
   align-self: flex-end;
 }
 
-.hideOnDesktop {
+.hide_on_desktop {
   display: none;
 }
 
@@ -98,6 +97,10 @@
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
+    background-image: url("../images/waveFooter.svg");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: contain;
     padding: 20px 0;
   }
 
@@ -132,7 +135,9 @@
   .footer_social {
     display: flex;
     flex-flow: column nowrap;
-    margin: auto 0 auto 15vw;
+    width: 30vw;
+    margin: 0;
+    padding: 5vh 0 5vh 15vw;
   }
 
   .footer_social_item {
@@ -140,6 +145,10 @@
     font-size: 16px;
     text-decoration: underline;
     margin: 1.5vh 0;
+  }
+
+  .footer_social_item:hover {
+    color: gainsboro;
   }
 
   .footer_logo {
@@ -157,24 +166,19 @@
   }
 
   .footer_wave {
-    display: flex;
     position: absolute;
-    bottom: -43.5vh;
-    left: 0;
     margin: 0;
     padding: 0;
     z-index: 1;
     width: 100vw;
     height: 41vh;
-    opacity: 0.05;
   }
 
-  .hideOnMobile {
+  .hide_on_mobile {
     display: none;
   }
 
-  .hideOnDesktop {
+  .hide_on_desktop {
     display: flex;
   }
 }
-

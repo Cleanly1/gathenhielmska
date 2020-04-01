@@ -93,7 +93,9 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-
+var footer = window.innerHeight;
+var footerWave = document.querySelector(".footer_wave");
+console.log(footerWave);
 
 /***/ }),
 
@@ -115,7 +117,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-// removed by extract-text-webpack-plugin
+throw new Error("Module build failed (from ./node_modules/css-loader/index.js):\nModuleNotFoundError: Module not found: Error: Can't resolve '../images/waveFooter.svg' in '/Users/oskar/Desktop/Yrgo/Projekt/gathenhielmska/resources/styles/components'\n    at /Users/oskar/Desktop/Yrgo/Projekt/gathenhielmska/node_modules/webpack/lib/Compilation.js:925:10\n    at /Users/oskar/Desktop/Yrgo/Projekt/gathenhielmska/node_modules/webpack/lib/NormalModuleFactory.js:401:22\n    at /Users/oskar/Desktop/Yrgo/Projekt/gathenhielmska/node_modules/webpack/lib/NormalModuleFactory.js:130:21\n    at /Users/oskar/Desktop/Yrgo/Projekt/gathenhielmska/node_modules/webpack/lib/NormalModuleFactory.js:224:22\n    at /Users/oskar/Desktop/Yrgo/Projekt/gathenhielmska/node_modules/neo-async/async.js:2830:7\n    at /Users/oskar/Desktop/Yrgo/Projekt/gathenhielmska/node_modules/neo-async/async.js:6877:13\n    at /Users/oskar/Desktop/Yrgo/Projekt/gathenhielmska/node_modules/webpack/lib/NormalModuleFactory.js:214:25\n    at /Users/oskar/Desktop/Yrgo/Projekt/gathenhielmska/node_modules/enhanced-resolve/lib/Resolver.js:213:14\n    at /Users/oskar/Desktop/Yrgo/Projekt/gathenhielmska/node_modules/enhanced-resolve/lib/Resolver.js:285:5\n    at eval (eval at create (/Users/oskar/Desktop/Yrgo/Projekt/gathenhielmska/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:13:1)\n    at /Users/oskar/Desktop/Yrgo/Projekt/gathenhielmska/node_modules/enhanced-resolve/lib/UnsafeCachePlugin.js:44:7\n    at /Users/oskar/Desktop/Yrgo/Projekt/gathenhielmska/node_modules/enhanced-resolve/lib/Resolver.js:285:5\n    at eval (eval at create (/Users/oskar/Desktop/Yrgo/Projekt/gathenhielmska/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:13:1)\n    at /Users/oskar/Desktop/Yrgo/Projekt/gathenhielmska/node_modules/enhanced-resolve/lib/Resolver.js:285:5\n    at eval (eval at create (/Users/oskar/Desktop/Yrgo/Projekt/gathenhielmska/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:25:1)\n    at /Users/oskar/Desktop/Yrgo/Projekt/gathenhielmska/node_modules/enhanced-resolve/lib/DescriptionFilePlugin.js:67:43\n    at /Users/oskar/Desktop/Yrgo/Projekt/gathenhielmska/node_modules/enhanced-resolve/lib/Resolver.js:285:5\n    at eval (eval at create (/Users/oskar/Desktop/Yrgo/Projekt/gathenhielmska/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:14:1)\n    at /Users/oskar/Desktop/Yrgo/Projekt/gathenhielmska/node_modules/enhanced-resolve/lib/Resolver.js:285:5\n    at eval (eval at create (/Users/oskar/Desktop/Yrgo/Projekt/gathenhielmska/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:25:1)\n    at /Users/oskar/Desktop/Yrgo/Projekt/gathenhielmska/node_modules/enhanced-resolve/lib/DescriptionFilePlugin.js:67:43\n    at /Users/oskar/Desktop/Yrgo/Projekt/gathenhielmska/node_modules/enhanced-resolve/lib/Resolver.js:285:5\n    at eval (eval at create (/Users/oskar/Desktop/Yrgo/Projekt/gathenhielmska/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:14:1)\n    at /Users/oskar/Desktop/Yrgo/Projekt/gathenhielmska/node_modules/enhanced-resolve/lib/Resolver.js:285:5\n    at eval (eval at create (/Users/oskar/Desktop/Yrgo/Projekt/gathenhielmska/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:13:1)\n    at /Users/oskar/Desktop/Yrgo/Projekt/gathenhielmska/node_modules/enhanced-resolve/lib/DirectoryExistsPlugin.js:27:15\n    at /Users/oskar/Desktop/Yrgo/Projekt/gathenhielmska/node_modules/enhanced-resolve/lib/CachedInputFileSystem.js:85:15\n    at processTicksAndRejections (internal/process/task_queues.js:79:11)");
 
 /***/ }),
 

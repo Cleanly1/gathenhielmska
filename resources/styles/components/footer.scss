@@ -1,5 +1,4 @@
 .footer {
-  align-self: flex-end;
   width: 100vw;
   display: flex;
   flex-flow: row nowrap;
@@ -88,7 +87,7 @@
 
 }
 
-.hideOnDesktop {
+.hide_on_desktop {
   display: none;
 }
 
@@ -97,6 +96,10 @@
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
+    background-image: url("../images/waveFooter.svg");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: contain;
     padding: 20px 0;
 
     &_parts{
@@ -130,13 +133,18 @@
     &_social{
       display: flex;
       flex-flow: column nowrap;
-      margin: auto 0 auto 15vw;
+      width: 30vw;
+      margin: 0;
+      padding: 5vh 0 5vh 15vw;
 
       &_item{
         color: white;
         font-size: 16px;
         text-decoration: underline;
         margin: 1.5vh 0;
+        &:hover {
+          color: gainsboro;
+        }
       }
     }
 
@@ -153,23 +161,19 @@
       align-self: center;
     }
     &_wave {
-      display: flex;
       position: absolute;
-      bottom: -43.5vh;
-      left: 0;
       margin: 0;
       padding: 0;
       z-index: 1;
       width: 100vw;
       height: 41vh;
-      opacity: 0.05;
     }
   }
 
-  .hideOnMobile{
+  .hide_on_mobile{
     display: none;
   }
-  .hideOnDesktop {
+  .hide_on_desktop {
     display: flex;
   }
 }
