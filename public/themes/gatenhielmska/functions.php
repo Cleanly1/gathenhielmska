@@ -56,3 +56,5 @@ add_filter('enter_title_here', 'change_default_title');
 require get_template_directory() . "/plate.php";
 require get_template_directory() . "/post-types/event.php";
 require get_template_directory() . "/fields/event.php";
+
+require get_template_directory() . "/taxonomies/event-types.php";
