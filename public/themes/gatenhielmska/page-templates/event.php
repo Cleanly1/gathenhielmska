@@ -11,24 +11,28 @@
 $terms = get_terms([
     'taxonomy' => 'event_type',
     'hide_empty' => false,
-    'orderby' => 'count',
-    'order' => 'DESC'
+    'orderby' => 'name',
+    'order' => 'ASC'
 ]);
+$arrayOfSlugs = [];
+foreach ($terms as $term) {
+    $arrayOfSlugs[] = $term->slug;
+};
+$totalEvents = 0;
+$category = '';
 ?>
 
-<div>
-    <ul>
-        <?php foreach ($terms as $term) : ?>
-            <a href="?cat=<?php echo $term->slug ?>"><?php echo $term->name . "($term->count)" ?></a>
-        <?php endforeach; ?>
-        <a href="?cat="> Remove filter </a>
-    </ul>
-</div>
+
 <?php
 if (isset($_GET['cat'])) {
-    $cat = $_GET['cat'];
+    $category = trim(filter_var($_GET['cat'], FILTER_SANITIZE_STRING));
 
-    $posts = get_posts(array(
+    if (!in_array($category, $arrayOfSlugs)) { ?>
+        <h1>No events for the search: <?php echo $category ?> </h1>
+<?php
+    };
+
+    $events = get_posts(array(
         'post_type' => 'event',
         'orderby' => 'post_date',
         'order' => 'ASC',
@@ -36,35 +40,37 @@ if (isset($_GET['cat'])) {
             array(
                 'taxonomy' => 'event_type',
                 'field' => 'slug',
-                'terms' => $cat
+                'terms' => $category
             )
         ),
         'numberposts' => -1
     ));
-    foreach ($posts as $post) {
-        setup_postdata($post) ?>
-        <?php $eventDate = explode(" ", get_field('event_start')); ?>
-        <div class="new_event">
-            <div class="new_event_header">
-                <h1 class="new_event_title"><?php the_title() ?></h1>
-                <p class="new_event_date">/ <?php echo "$eventDate[0] $eventDate[1]" ?> / <?php the_field('event_start_time') ?> </p>
-            </div>
-            <p class="new_event_desc"><?php the_field('event_sum') ?></p>
-            <a class="new_event_button" href="<?php the_permalink() ?>">Läs mer</a>
-        </div>
-    <?php }
-} else { ?>
-    <?php
-
-
-
+} else {
     $events = get_posts([
         'post_type' => 'event',
         'orderby' => 'post_date',
         'order' => 'ASC',
-    ]); ?>
-    <div class="preview_container">
-        <?php foreach ($events as $post) : setup_postdata($post) ?>
+    ]);
+}
+?>
+<div class="filters_container">
+    Filters:
+    <ul class="filters">
+        <?php foreach ($terms as $term) : ?>
+            <a class="filters_items <?php echo $category == $term->slug ? "active" : "" ?>" href="?cat=<?php echo $term->slug ?>"><?php echo $term->name ?> </a>
+        <?php
+            $totalEvents += $term->count;
+        endforeach;
+        ?>
+        <a class="filters_items <?php echo $category == "" ? "active" : "" ?>" href="?cat="> All </a>
+    </ul>
+</div>
+<div class="preview_container">
+    <?php
+    foreach ($events as $post) {
+        setup_postdata($post) ?>
+        <?php if (get_field('event_start') >= date('j F Y')) {
+        ?>
             <?php $eventDate = explode(" ", get_field('event_start')); ?>
             <div class="new_event">
                 <div class="new_event_header">
@@ -72,32 +78,18 @@ if (isset($_GET['cat'])) {
                     <p class="new_event_date">/ <?php echo "$eventDate[0] $eventDate[1]" ?> / <?php the_field('event_start_time') ?> </p>
                 </div>
                 <p class="new_event_desc"><?php the_field('event_sum') ?></p>
-                <?php if (get_the_terms($post, 'event_type') != false) : ?>
-                    <?php foreach (get_the_terms($post, 'event_type') as $eventType) : ?>
-                        <a href="?cat=<?php echo $eventType->slug ?>"><?php echo $eventType->name ?></a>
-                    <?php endforeach; ?>
-                <?php endif; ?>
-                <a class="new_event_button" href="<?php the_permalink() ?>">Läs mer</a>
+                <div class="new_event_footer">
+                    <a class="new_event_button" href="<?php the_permalink() ?>">Läs mer</a>
+                    <?php if (get_the_terms($post, 'event_type') != false) : ?>
+                        <?php foreach (get_the_terms($post, 'event_type') as $eventType) : ?>
+                            <a class="new_event_tag" href="?cat=<?php echo $eventType->slug ?>"><?php echo $eventType->name ?></a>
+                        <?php endforeach; ?>
+                    <?php endif; ?>
+                </div>
             </div>
-
-            <?php // if (get_field('event_start') >= date('F j, Y')) :
-            ?>
-            <!-- <a href="<?php // the_permalink()
-                            ?>" class="preview_event">
-            <img class="preview_image" src="<?php //the_field('event_image')
-                                            ?>" alt="Event image">
-            <div class="preview_overlay">
-                <p </p>
-                <p class="preview_date"><?php //the_field('event_start')
-                                        ?> - <?php // the_field('event_end')
-                                                ?></p>
-            </div>
-        </a> -->
-            <?php //endif;
-            ?>
-    <?php endforeach;
+    <?php }
     } ?>
-    </div>
+</div>
 
 
-    <?php get_footer(); ?>
+<?php get_footer(); ?>
