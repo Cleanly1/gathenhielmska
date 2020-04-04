@@ -9,7 +9,7 @@ body {
   width: 100vw;
   height: 90px;
   background-color: var(--white);
-  z-index: 100;
+  z-index: 20;
 }
 .navbar-container {
   width: 100%;
@@ -18,6 +18,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 17px;
+  z-index: 50;
 }
 #logo {
   width: 150px;
@@ -83,18 +84,22 @@ body {
   width: 100%;
   height: calc(100vh - 90px);
   background-color: var(--white);
-  z-index: 50;
   transition: all 0.3s ease-in-out;
   padding: 10px;
   left: 100%;
 }
-.slider-menu ul {
+.links-container {
+  z-index: 10;
+}
+.links-container ul {
   position: absolute;
   top: 30px;
   list-style-type: none;
   color: black;
+  z-index: 10;
 }
 .slider-menu ul li {
+  transition: all 0.3s ease-in-out;
   padding: 10px;
 }
 .slider-menu ul li a {
@@ -104,30 +109,69 @@ body {
 .menu-slider-open {
   left: 0;
 }
+.menu-dropdown {
+  position: absolute;
+  top: 40px;
+  width: 100%;
+  height: 150px;
+  transition: all 0.2s ease-in-out;
+  opacity: 0;
+  padding-left: 20px;
+}
+
+.menu-dropdown ul {
+  position: absolute;
+  list-style-type: none;
+  color: black;
+}
+.menu-dropdown li {
+  padding: 10px;
+}
+
+.dropdown-down-children {
+  transform: translateY(30px);
+  opacity: 1;
+  z-index: 100;
+}
+.dropdown-down-parents {
+  transform: translateY(130px);
+}
+.dropdown-up {
+  transform: translateY(0);
+}
+
 .flex {
   width: 100%;
   height: 100%;
   display: flex;
   align-items: center;
+  z-index: 0;
 }
 .slider-bird {
   position: absolute;
   bottom: 0;
   width: 350px;
   height: 350px;
+  z-index: 0;
 }
 
 #slider-big-g {
   position: absolute;
+  top: 25%;
   width: 95%;
   z-index: -1;
 }
+
 .desktop-menu {
   display: none;
 }
 
 @media (min-width: 1025px) {
   .mobile-container {
+    display: none;
+  }
+
+  .slider-menu {
     display: none;
   }
 

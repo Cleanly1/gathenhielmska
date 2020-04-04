@@ -34,6 +34,7 @@
                 </svg>
             </a>
             <!-- Logo -->
+            <!-- mobile -container start-->
             <div class="mobile-container">
                 <div class="burger-menu">
                     <div class="burger-menu-bar"></div>
@@ -42,32 +43,49 @@
 
             <!-- SLIDER MENU -->
             <div class="slider-menu">
-                <ul>
-                    <?php foreach (get_pages(['sort_column' => 'menu_order']) as $page) { ?>
-                        <li>
-                            <a class="<?php if (is_home() && $page->ID === get_option('page_for_posts') || is_page($page->ID)) {
-                                            echo 'active';
-                                        } ?>" href="<?php echo get_permalink($page) ?>"><?php echo ($page->post_title); ?></a>
-                        </li>
-                    <?php } ?>
-                </ul>
+                <div class="menu-dropdown">
+                    <ul>
+                        <?php foreach (get_pages(['sort_column' => 'menu_order', 'parent' => 0]) as $page) { ?>
+                            <?php foreach (get_pages(['sort_column' => 'menu_order', 'sort_order' => 'desc', 'parent' => $page->ID]) as $childPage) { ?>
+                                <li>
+                                    <a href="<?php echo get_page_link($childPage->ID); ?>"><?php echo $childPage->post_title; ?></a>
+                                </li>
+                            <?php } ?>
+                        <?php } ?>
+                    </ul>
+                </div>
+
+                <div class="links-container">
+                    <ul>
+                        <?php foreach (get_pages(['sort_column' => 'menu_order', 'parent' => 0]) as $page) { ?>
+                            <li id="menu-list-mobile">
+                                <a id="menu-links-mobile" <?php if (is_home() && $page->ID === get_option('page_for_posts') || is_page($page->ID)) {
+                                        echo 'active';
+                                    } ?> href="<?php echo get_permalink($page) ?>"><?php echo ($page->post_title); ?></a>
+                            </li>
+                        <?php } ?>
+                    </ul>
+                </div>
+
                 <div class="flex">
                     <svg id="slider-big-g" viewBox="0 0 350 371" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M6.6363 124.229C26.359 67.3946 72.0067 33.3263 121.137 6.31131C134.521 -1.04155 155.849 -1.7496 170.756 3.04338C206.175 14.4539 239.881 31.1477 274.511 45.1726C309.386 59.2792 332.264 46.861 321.492 60.9131C292.928 98.1677 254.489 109.578 211.888 90.0795C192.383 81.1472 173.694 70.2812 153.944 61.9752C121.599 48.4133 88.6553 49.9928 59.5746 74.7202C27.2022 102.253 14.1989 137.764 24.9443 179.703C38.0565 230.9 73.3125 262.545 120.157 282.67C175.87 306.635 232.318 301.869 287.759 282.67C314.908 273.247 334.196 252.986 334.087 222.322C334.033 208.733 329.979 188.281 320.948 183.352C309.821 177.252 289.935 180.302 276.878 186.13C256.828 195.117 209.358 243.945 155.767 236.919C122.578 232.562 94.6401 196.124 96.2995 183.869C97.6053 174.365 98.1495 183.869 146.055 177.088C182.073 171.996 208.433 145.117 228.074 133.026C265.234 110.177 296.872 111.158 324.566 144.627C375.817 206.554 342.439 296.069 287.895 335.611C193.906 403.774 49.6997 368.644 12.5667 249.718C10.9617 244.408 -10.5836 183.842 6.6363 124.229Z" fill="#EDC8BF" fill-opacity="0.15" />
                     </svg>
                 </div>
 
-                <img class="slider-bird" src="<?php echo get_template_directory_uri() . '/assets/images/bird1.png' ?>" alt="asd">
+                    <img class="slider-bird" src="<?php echo get_template_directory_uri() . '/assets/images/bird1.png' ?>" alt="asd">
 
             </div>
-            <!-- SLIDER MENU -->
+            <!-- mobile container end -->
+
+            <!-- SLIDER MENU end -->
             <div class="desktop-menu">
                 <ul>
-                    <?php foreach (get_pages(['sort_column' => 'menu_order']) as $page) { ?>
+                    <?php foreach (get_pages(['sort_column' => 'menu_order' , 'parent' => 0]) as $page) { ?>
                         <li>
-                            <a class="<?php if (is_home() && $page->ID === get_option('page_for_posts') || is_page($page->ID)) {
-                                            echo 'active';
-                                        } ?>" href="<?php echo get_permalink($page) ?>"><?php echo ($page->post_title); ?></a>
+                            <a <?php if (is_home() && $page->ID === get_option('page_for_posts') || is_page($page->ID)) {
+                                    echo 'active';
+                                } ?>" href="<?php echo get_permalink($page) ?>">  <?php echo ($page->post_title); ?></a>
                         </li>
                     <?php } ?>
                 </ul>
