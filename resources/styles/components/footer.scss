@@ -90,21 +90,16 @@
 .hide_on_desktop {
   display: none;
 }
-
-@media only screen and (max-width: 425px){
+@media only screen and (max-width: 1024px){
   .footer{
-    flex-flow: column nowrap;
+    flex-flow: row wrap;
     justify-content: center;
     align-items: center;
-    background-image: url("../images/waveFooter.svg");
-    background-repeat: no-repeat;
-    background-position: bottom;
-    background-size: contain;
     padding: 20px 0;
 
     &_parts{
       position: static;
-      width: 100vw;
+      width: 50vw;
       padding: 0;
       z-index: 2;
 
@@ -121,7 +116,7 @@
 
     &_list{
       list-style: none;
-      margin: auto 0 auto 15vw;
+      margin: auto 0 auto 10vw;
       padding: 0;
 
       &_item{
@@ -133,9 +128,8 @@
     &_social{
       display: flex;
       flex-flow: column nowrap;
-      width: 30vw;
-      margin: 0;
-      padding: 5vh 0 5vh 15vw;
+      margin: auto 0;
+      padding: 5vh 0 5vh 5vw;
 
       &_item{
         color: white;
@@ -153,12 +147,62 @@
     }
 
     &_flower {
-      width: 70vw;
+      width: 40vw;
       align-self: auto;
       transform: rotateY(180deg);
     }
     &_copy {
       align-self: center;
+    }
+  }
+
+  .hide_on_mobile{
+    display: none;
+  }
+  .hide_on_desktop {
+    display: flex;
+  }
+}
+
+
+
+
+@media only screen and (max-width: 425px){
+  .footer{
+    flex-flow: column nowrap;
+    // background-image: url("../images/waveFooter.svg");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: contain;
+
+    &_parts{
+      width: 100vw;
+    }
+
+    &_list{
+      margin: auto 0 auto 15vw;
+
+      &_item{
+        font-size: 16px;
+        margin: 3vh 0;
+      }
+    }
+
+    &_social{
+      display: flex;
+      flex-flow: column nowrap;
+      width: 30vw;
+      margin: 0;
+      padding: 5vh 0 5vh 15vw;
+
+      &_item{
+        font-size: 16px;
+        margin: 1.5vh 0;
+      }
+    }
+
+    &_flower {
+      width: 70vw;
     }
     &_wave {
       position: absolute;
@@ -170,10 +214,4 @@
     }
   }
 
-  .hide_on_mobile{
-    display: none;
-  }
-  .hide_on_desktop {
-    display: flex;
-  }
 }
