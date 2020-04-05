@@ -85,7 +85,6 @@ body {
   height: calc(100vh - 90px);
   background-color: var(--white);
   transition: all 0.3s ease-in-out;
-  padding: 10px;
   left: 100%;
 }
 .links-container {
