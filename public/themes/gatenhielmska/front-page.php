@@ -7,7 +7,9 @@
     <a class="new_event_button front_page_button" href="">Läs mer</a>
     <img class="front_page_image" src="<?php echo get_template_directory_uri() ?>/assets/images/Logo.png" alt="">
 </div>
-
+<div class="front_page_event_header">
+    <p class="front_page_event_text">Aktuellt</p>
+</div>
 <?php $events = get_posts([
     'post_type' => 'event',
     'orderby' => 'post_date',

@@ -11,6 +11,11 @@
   font-family: Avenir Next Condensed;
   font-style: normal;
   font-weight: normal;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
 }
 
 .event{
@@ -54,7 +59,7 @@
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-between;
-  width: 100%;
+  width: 94vw;
   height: 30vh;
   background-color: #E0E0E0;
   padding: 1.5vh 3vw;
@@ -132,10 +137,7 @@
     }
   }
 
-  .active {
-    color: var(--darkBlue);
-    font-weight: 500;
-  }
+
 
 
 .front_page{
@@ -190,8 +192,26 @@
     height: 75vh;
     z-index: -1;
   }
-}
 
+  &_event {
+    &_header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 12vh;
+      background-color: var(--darkBlue);
+
+    }
+    &_text {
+      font-family: Minion Pro;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 25px;
+      line-height: 30px;
+      color: var(--white);
+    }
+  }
+}
 
 .preview{
 
@@ -199,7 +219,14 @@
     margin: 0;
     padding: 0;
     min-height: 30vh;
+    width: 100vw;
     display: flex;
     flex-flow: column nowrap;
   }
+}
+
+
+.active {
+  color: var(--darkBlue);
+  font-weight: 600;
 }
