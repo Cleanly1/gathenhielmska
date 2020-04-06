@@ -12,12 +12,11 @@ body {
   z-index: 20;
 }
 .navbar-container {
-  width: 100%;
   height: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 17px;
+  padding: 13px;
   z-index: 50;
 }
 #logo {
