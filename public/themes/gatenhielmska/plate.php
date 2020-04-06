@@ -31,7 +31,7 @@ add_theme_support('plate-disable-dashboard', [
     'dashboard_quick_press',
     'dashboard_recent_drafts',
     'dashboard_secondary',
-    //'dashboard_right_now',
+    'dashboard_right_now',
 ]);
 
 // Disable links from admin toolbar.
@@ -51,7 +51,7 @@ add_theme_support('plate-disable-toolbar', [
 // add_theme_support('plate-permalink', '/%postname%/');
 
 // Set custom login logo.
-add_theme_support('plate-login-logo', get_theme_file_uri('assets/images/Logo.png'));
+add_theme_support('plate-login-logo', get_theme_file_uri('assets/images/gathenhielmskaLogo.svg'));
 
 // Set custom footer text.
 add_theme_support('plate-footer-text', 'Thank you for choosing Grupp 9(VFX & DVD)');

@@ -50,6 +50,32 @@ if (function_exists('acf_add_local_field_group')) :
                 'new_lines' => '',
             ),
             array(
+                'key' => 'field_5e85df84ca5f9',
+                'label' => 'Event Summary',
+                'name' => 'event_sum',
+                'type' => 'textarea',
+                'instructions' => 'Please write a short summary for the event',
+                'required' => 1,
+                'conditional_logic' => array(
+                    array(
+                        array(
+                            'field' => 'field_5e7a04d545679',
+                            'operator' => '!=empty',
+                        ),
+                    ),
+                ),
+                'wrapper' => array(
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'default_value' => '',
+                'placeholder' => '',
+                'maxlength' => 200,
+                'rows' => '',
+                'new_lines' => '',
+            ),
+            array(
                 'key' => 'field_5e7a116a3774a',
                 'label' => 'Arranger',
                 'name' => 'arranger',
@@ -72,7 +98,7 @@ if (function_exists('acf_add_local_field_group')) :
                 'key' => 'field_5e7a05294567a',
                 'label' => 'Additional Information',
                 'name' => 'extra_info',
-                'type' => 'textarea',
+                'type' => 'text',
                 'instructions' => 'If there are any additional information that the participants need to know you can enter it here',
                 'required' => 0,
                 'conditional_logic' => 0,
@@ -100,8 +126,8 @@ if (function_exists('acf_add_local_field_group')) :
                     'class' => '',
                     'id' => '',
                 ),
-                'display_format' => 'F j, Y',
-                'return_format' => 'F j, Y',
+                'display_format' => 'j F',
+                'return_format' => 'j F Y',
                 'first_day' => 1,
             ),
             array(
@@ -129,7 +155,7 @@ if (function_exists('acf_add_local_field_group')) :
             ),
             array(
                 'key' => 'field_5e7a06544567c',
-                'label' => 'Event End',
+                'label' => 'Event End Date',
                 'name' => 'event_end',
                 'type' => 'date_picker',
                 'instructions' => 'Please enter when the Event ends',
@@ -147,8 +173,8 @@ if (function_exists('acf_add_local_field_group')) :
                     'class' => '',
                     'id' => '',
                 ),
-                'display_format' => 'F j, Y',
-                'return_format' => 'F j, Y',
+                'display_format' => 'j F',
+                'return_format' => 'j F Y',
                 'first_day' => 1,
             ),
             array(

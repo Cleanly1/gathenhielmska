@@ -12,11 +12,11 @@ add_theme_support('soil-relative-urls');
 
 add_action('wp_enqueue_scripts', function () {
     wp_deregister_script('jquery');
-    wp_enqueue_style('bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css');
+    // wp_enqueue_style('bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css');
     wp_register_script('jquery', 'https://code.jquery.com/jquery-3.2.1.slim.min.js', '', '', true);
-    wp_register_script('bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js', '', '', true);
+    // wp_register_script('bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js', '', '', true);
     wp_enqueue_script('jquery');
-    wp_enqueue_script('bootstrap');
+    // wp_enqueue_script('bootstrap');
 
     wp_enqueue_style('customstyles', get_stylesheet_directory_uri() . '/assets/styles/app.css');
     wp_enqueue_style('custom', get_stylesheet_directory_uri() . '/assets/styles/navbar.css');
@@ -60,3 +60,5 @@ add_filter('enter_title_here', 'change_default_title');
 require get_template_directory() . "/plate.php";
 require get_template_directory() . "/post-types/event.php";
 require get_template_directory() . "/fields/event.php";
+
+require get_template_directory() . "/taxonomies/event-types.php";
