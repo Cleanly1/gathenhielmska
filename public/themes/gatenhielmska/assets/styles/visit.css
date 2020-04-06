@@ -1,0 +1,22 @@
+.visit-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+}
+/* remove later */
+
+.visit-map-overview {
+  width: 100%;
+  height: 700px;
+  background-color: #ffede9;
+}
+.visit-img-container {
+  width: 100%;
+  height: 406px;
+  background-color: gray;
+}
+.visit-text-img {
+  background-color: #12495f;
+  color: #ffede9;
+}
