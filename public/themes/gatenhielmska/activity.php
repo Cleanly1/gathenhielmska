@@ -3,7 +3,17 @@
 <?php get_header(); ?>
 
 <!-- mobile container start -->
-<div class="visit-mobile-container">
+<div class="activity-mobile-container">
+    <div class="about-line"></div>
+        <ul class="about-desktop-sub-nav">
+            <?php foreach (get_pages(['sort_column' => 'menu_order', 'parent' => 0]) as $page) { ?>
+                <?php foreach (get_pages(['sort_column' => 'menu_order', 'sort_order' => 'desc', 'parent' => $page->ID]) as $childPage) { ?>
+                    <li class="desktop-sub-nav-list">
+                        <a href="<?php echo get_page_link($childPage->ID); ?>"><?php echo $childPage->post_title; ?></a>
+                    </li>
+                <?php } ?>
+            <?php } ?>
+        </ul>
     <div class="page-title-mobile">
         <h1>verksamheten</h1>
     </div>
