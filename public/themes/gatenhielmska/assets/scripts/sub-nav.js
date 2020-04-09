@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", function (event) {
   const subList = document.querySelectorAll(".desktop-sub-nav-list");
-  const subLinks = document.querySelectorAll(".desktop-sub-nav-a");
   const pathName = window.location.pathname;
 
   const historyURL = "/om-gatenhielmska/historia/";
