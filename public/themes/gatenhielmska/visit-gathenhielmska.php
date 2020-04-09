@@ -3,7 +3,19 @@
 <?php get_header(); ?>
 
 <!-- mobile container start -->
-<div class="visit-mobile-container">
+
+
+<div class="visit-container">
+    <div class="about-line"></div>
+        <ul class="about-desktop-sub-nav">
+            <?php foreach (get_pages(['sort_column' => 'menu_order', 'parent' => 0]) as $page) { ?>
+                <?php foreach (get_pages(['sort_column' => 'menu_order', 'sort_order' => 'desc', 'parent' => $page->ID]) as $childPage) { ?>
+                    <li class="desktop-sub-nav-list">
+                        <a class="desktop-sub-nav-a" href="<?php echo get_page_link($childPage->ID); ?>"><?php echo $childPage->post_title; ?></a>
+                    </li>
+                <?php } ?>
+            <?php } ?>
+        </ul>
     <div class="page-title-mobile">
         <h1>besök <br> gatenhielmska</h1>
     </div>
@@ -26,7 +38,7 @@
             </div>
         </div>
         <div class="visit-img-container visit-flex">Img</div>
-        <div class="visit-text-img allround-text-container">
+        <div id="visit-grid-section" class="visit-text-img allround-text-container">
             <div>
                 <h3>Trädgården</h3>
                 <p>På husets baksida breder Gathenhielmska trädgården ut sig, med gångar, rosenbuskar, lusthus och ekträd. En gång i tiden var även Söderlingska parken en del av husets trädgård, men är i nutid avgränsad med ett trästaket. Trädgården har rustats upp med nya planteringar och växter, och skall inom kort öppnas upp mot parken med en grind.</p>
