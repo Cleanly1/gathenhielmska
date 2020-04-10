@@ -27,6 +27,7 @@ add_action('wp_enqueue_scripts', function () {
     wp_enqueue_style('allround', get_stylesheet_directory_uri() . '/assets/styles/allround.css');
     wp_enqueue_script('script', get_template_directory_uri() . '/assets/scripts/app.js');
     wp_enqueue_script('sub-nav', get_template_directory_uri() . '/assets/scripts/sub-nav.js');
+    wp_enqueue_script('information-btn', get_template_directory_uri() . '/assets/scripts/information-btn.js');
     wp_enqueue_script('navbar', get_template_directory_uri() . '/assets/scripts/navbar.js', false, false, true);
 });
 

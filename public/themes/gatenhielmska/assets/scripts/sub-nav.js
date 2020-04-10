@@ -10,9 +10,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
   const activity = subList[1];
   const visit = subList[2];
 
-  console.log(subList[0]);
-  console.log(pathName);
-
   if (pathName === activityURL || pathName === "/om-gatenhielmska/") {
     activity.style.backgroundColor = "#FFFFFF";
   }
