@@ -31,6 +31,8 @@ add_action('wp_enqueue_scripts', function () {
     wp_enqueue_script('navbar', get_template_directory_uri() . '/assets/scripts/navbar.js', false, false, true);
 });
 
+
+
 function add_theme_caps()
 {
     remove_role('editor');
