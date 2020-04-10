@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", function (event) {
   const subList = document.querySelectorAll(".desktop-sub-nav-list");
-  const subLinks = document.querySelectorAll(".desktop-sub-nav-a");
   const pathName = window.location.pathname;
 
   const historyURL = "/om-gatenhielmska/historia/";
@@ -10,9 +9,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
   const history = subList[0];
   const activity = subList[1];
   const visit = subList[2];
-
-  console.log(subList[0]);
-  console.log(pathName);
 
   if (pathName === activityURL || pathName === "/om-gatenhielmska/") {
     activity.style.backgroundColor = "#FFFFFF";
