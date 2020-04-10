@@ -64,6 +64,18 @@ och lokal tillväxt. En grundtanke med verksamheten i Gathenhielmska Huset är a
         </div>
     </div>
     <div class="activity-sponsor-container">
+        <div class="activity-sponsor-first">
+            <div class="activity-sponsor-flex">
+                <h3>Våra samarbetspartners</h3>
+            </div>
+            <div class="activity-sponsor-flex">
+
+                <p>Klicka på loggorna för att läsa mer om verksamheten på deras hemsida</p>
+            </div>
+        </div>
+        <div id="gbg-sponsor" class="activity-sponsor-flex"></div>
+        <div id="higab-sponsor" class="activity-sponsor-flex"></div>
+        <div id="studie-sponsor" class="activity-sponsor-flex"></div>
 
     </div>
 
