@@ -18,10 +18,10 @@
 
 .about-text-mobile h3 {
   font-weight: bold;
-  font-size: 24px;
+  font-size: 28px;
   line-height: 29px;
   text-transform: capitalize;
-  text-align: center;
+
   order: 0;
   align-self: center;
   margin: 0px 20px;
@@ -115,11 +115,6 @@
     margin-top: 20px;
     padding: 2em 6em;
     text-align: center;
-  }
-  .visit-img-txt-container {
-    display: grid;
-    grid-template-columns: repeat(2, 50%);
-    grid-template-rows: repeat(3, 400px);
   }
 
   /* desktop sub-nav */
