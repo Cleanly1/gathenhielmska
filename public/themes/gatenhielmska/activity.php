@@ -16,8 +16,8 @@
             <?php } ?>
         </ul>
         <!-- desktop sub-nav -->
-    <div class="page-title-mobile">
-        <h1>verksamheten</h1>
+    <div class="page-header-activity">
+
     </div>
     <div class="about-text-mobile">
         <div>
@@ -39,31 +39,45 @@
 och lokal tillväxt. En grundtanke med verksamheten i Gathenhielmska Huset är att skapa processer som uppmuntrar till innovativa möten och samverkan mellan konstnärer, kulturutövare, lokalt näringsliv och besökare. Gathenhielmska Huset skall vara en sammanlänkande plats i området och en arbetsplats och scen för design, dans, opera, musik, teater, konst och litteratur.
             </p>
         </div>
-        <div>
-            <div class="about-information-btn activity-btn">
-                <p>Företag i huset</p>
-                <div class="btn-arrow"></div>
+            <div>
+                <div class="about-information-btn activity-btn">
+                    <p>Företag i huset</p>
+                    <div class="btn-arrow"></div>
+                </div>
+                <div class="information-txt-container">
+                <p class="about-information-txt activity-txt">
+                I dagsläget är det runt tio aktörer som hyr arbetsplats. En mångfald av verksamheter gynnar både de som har huset som arbetsplats och verksamheten i sin helhet. Olikheterna stärker ett ekosystem där alla deltar utifrån sina förutsättningar och villkor. Varje aktör är en tillgång och en viktig del för helheten.
+                <br>
+                <br>
+                <span id="activity-bold-txt">Aktörer:</span>
+                <br>
+                <br>
+                    Castingverket<br>
+                    Reostat Media<br>
+                    Folkstaden<br>
+                    Teater Tofta<br>
+                    Emma Ekdala/Emma Vendelek (terapi)<br>
+                    Mattias Gunnarsson (Design/Arkitekt)<br>
+                    Doma, Doma, Doma (Design)<br>
+                    John Dohlsten (Musik)<br>
+                    Hanna Norrna (Vävstol)<br>
+                </p>
             </div>
-            <p class="about-information-txt activity-txt">
-            I dagsläget är det runt tio aktörer som hyr arbetsplats. En mångfald av verksamheter gynnar både de som har huset som arbetsplats och verksamheten i sin helhet. Olikheterna stärker ett ekosystem där alla deltar utifrån sina förutsättningar och villkor. Varje aktör är en tillgång och en viktig del för helheten.
-            <br>
-            <br>
-            <span id="activity-bold-txt">Aktörer:</span>
-            <br>
-            <br>
-                Castingverket<br>
-                Reostat Media<br>
-                Folkstaden<br>
-                Teater Tofta<br>
-                Emma Ekdala/Emma Vendelek (terapi)<br>
-                Mattias Gunnarsson (Design/Arkitekt)<br>
-                Doma, Doma, Doma (Design)<br>
-                John Dohlsten (Musik)<br>
-                Hanna Norrna (Vävstol)<br>
-            </p>
         </div>
     </div>
     <div class="activity-sponsor-container">
+        <div class="activity-sponsor-first">
+            <div class="activity-sponsor-flex">
+                <h3>Våra samarbetspartners</h3>
+            </div>
+            <div class="activity-sponsor-flex">
+
+                <p>Klicka på loggorna för att läsa mer om verksamheten på deras hemsida</p>
+            </div>
+        </div>
+        <div id="gbg-sponsor" class="activity-sponsor-flex"></div>
+        <div id="higab-sponsor" class="activity-sponsor-flex"></div>
+        <div id="studie-sponsor" class="activity-sponsor-flex"></div>
 
     </div>
 
