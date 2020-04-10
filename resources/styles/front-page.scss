@@ -1,0 +1,77 @@
+.front_page{
+  &:nth-child(1n) {
+    background-color: #e0e0e0;
+  }
+
+  &:nth-child(2n + 1) {
+    background-color: #c4c4c4;
+  }
+
+  &:nth-child(3n + 2) {
+    background-color: #a4a4a4;
+  }
+
+  &:nth-last-child(0n){
+    background-color: #e0e0e0;
+  }
+
+  &_header {
+    background-color: rgba(0, 0, 0, 0);
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    height: 75vh;
+    padding: 0 5vw;
+    overflow: hidden;
+  }
+
+  &_motto {
+    position: absolute;
+    font-family: Minion Pro;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 39px;
+    line-height: 47px;
+    color: var(--lightPink);
+    text-align: left;
+    height: 40vh;
+    width: 81vw;
+  }
+
+  &_button {
+    position: absolute;
+    bottom: 20vh;
+  }
+
+  &_image {
+    top: 90px;
+    left: 0;
+    height: 75vh;
+    z-index: -1;
+  }
+
+  &_event {
+    &_header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 12vh;
+      background-color: var(--darkBlue);
+
+    }
+    &_text {
+      font-family: Minion Pro;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 25px;
+      line-height: 30px;
+      color: var(--white);
+    }
+  }
+}
+
+
+@media (min-width: 1025px) {
+
+}
