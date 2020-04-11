@@ -110,10 +110,10 @@ En viktig del av Gathenhielmska Huset är att förvalta det historiska arvet. Ge
     </div>
 </div>
 <!-- timeline animation -->
+<div class="history-last-section">
+    <h3>Visste du att?</h3>
+    <p>Lars och Ingela hade licens från kungen att plundra fiendeskepp ute till havs, för att ge Sverige fördelar i krigstider. Efter Lars bortgång 1718, skötte Ingela kaparverksamhetenoch andra affärsverksamheter med stor framgång fram till sin död 1729.</p>
+</div>
 
-
-
-
-<!-- mobile container end -->
 
 <?php get_footer(); ?>
