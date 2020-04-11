@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
   const btns = document.querySelectorAll(".history-btn");
   const texts = document.querySelectorAll(".history-txt");
   const arrow = document.querySelectorAll(".btn-arrow");
+  const timelineTop = document.querySelector(".history-timeline-top");
 
   const btn1 = btns[0];
   const btn2 = btns[1];
@@ -36,12 +37,12 @@ document.addEventListener("DOMContentLoaded", function (event) {
   });
 
   btn3.addEventListener("click", () => {
-    text2.classList.toggle("toggle-text");
-    arrow2.classList.toggle("btn-arrow-open");
-    if (sponsorSection.style.marginTop === `${text2Height}px`) {
-      sponsorSection.style.marginTop = "0px";
+    text3.classList.toggle("toggle-text");
+    arrow3.classList.toggle("btn-arrow-open");
+    if (timelineTop.style.marginTop === `${text3Height}px`) {
+      timelineTop.style.marginTop = "0px";
     } else {
-      sponsorSection.style.marginTop = `${text2Height}px`;
+      timelineTop.style.marginTop = `${text3Height}px`;
     }
   });
 });

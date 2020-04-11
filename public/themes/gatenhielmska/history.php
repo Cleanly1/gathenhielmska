@@ -55,6 +55,62 @@ En viktig del av Gathenhielmska Huset är att förvalta det historiska arvet. Ge
 </div>
 </div>
 
+     <!-- timeline animation -->
+
+
+     <div class="history-timeline-top">Tidslinje</div>
+     <div class="history-animation-container">
+
+    <div class="history-line"></div>
+    <div class="history-dot"></div>
+
+
+    <div class="history-animation-big-g"></div>
+    <div class="history-grid-container">
+        <div id="history-animation-one" class="history-grid-content">
+            <h3>1717</h3>
+            <p>Marken skänks till den kungliga kaparen Lars Gathenhielm av Karl XII</p>
+        </div>
+        <div id="history-animation-two" class="history-grid-content">
+            <h3>1737</h3>
+            <p>Tomten säljs till Lars syster Anna Thalena Gathe och hennes man Johan Busck</p>
+        </div>
+        <div id="history-animation-three" class="history-grid-content">
+            <h3>1740</h3>
+            <p>Huset uppförs och stannar inom släkten Gathenhielm fram till 1800-talet</p>
+        </div>
+        <div id="history-animation-four" class="history-grid-content">
+            <h3>1846</h3>
+            <p>Huset säljs till repslagaremästaren Mathias Dahlström</p>
+        </div>
+        <div id="history-animation-five" class="history-grid-content">
+            <h3>1916</h3>
+            <p>Mathias Dahlströms dotter Anna Dahlström börjar renovera huset med hjälp av Röhsska konstslöjdsmuseet för att återställa det till sitt tidigare skick</p>
+        </div>
+        <div id="history-animation-six" class="history-grid-content">
+            <h3>1920</h3>
+            <p>Konstnären Johan Nilsson fortsätter på beställning av Anna Dahlström renoveringen av huset. Historiska detaljer som tidigare varit dolda bakom tapeter och paneler upptäcks. Anna Dahlström börjar jobba för husets bevarande</p>
+        </div>
+        <div id="history-animation-seven" class="history-grid-content">
+            <h3>1943</h3>
+            <p>Lagen om kulturminnesskydd träder i kraft och Gathenhielmska huset blir landets första hus att bli förklarat till byggnadsminne.</p>
+        </div>
+        <div id="history-animation-eight" class="history-grid-content">
+            <h3>1991</h3>
+            <p>Ordenssällskapet Wänskapsförbundet tar över hyreskontraktet</p>
+        </div>
+        <div id="history-animation-nine" class="history-grid-content">
+            <h3>2017</h3>
+            <p>Projektledaren Isabel Lagos inleder arbetet med att öppna upp huset för konstnärer och besökare</p>
+        </div>
+        <div id="history-animation-ten" class="history-grid-content">
+            <h3>2020</h3>
+            <p>Gathenhielmska huset öppnar som kulturmötesplats!</p>
+        </div>
+    </div>
+</div>
+<!-- timeline animation -->
+
 
 
 
