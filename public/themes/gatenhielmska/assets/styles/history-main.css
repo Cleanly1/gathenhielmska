@@ -1,0 +1,62 @@
+.history-timeline-top {
+  width: 100%;
+  height: 170px;
+  background-color: #12495f;
+  z-index: 0;
+  color: white;
+  font-size: 25px;
+  font-weight: normal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.history-animation-container {
+  width: 100%;
+  position: relative;
+  background-color: #12495f;
+  overflow: hidden;
+}
+
+.history-line {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  width: 3px;
+  height: 95%;
+  background-color: #e8680b;
+}
+.history-dot {
+  position: absolute;
+  left: calc(50% - 7.5px);
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: #e8680b;
+}
+
+@media (min-width: 1025px) {
+  .history-animation-big-g {
+    background-image: url("./../images/timeline-big-g.svg");
+    background-repeat: no-repeat;
+    margin-top: 100px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+  }
+  .history-animation-container {
+    width: 100%;
+    position: relative;
+    background-color: #12495f;
+    height: 2130px;
+  }
+  .history-line {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    width: 3px;
+    height: 90%;
+    background-color: #e8680b;
+  }
+}

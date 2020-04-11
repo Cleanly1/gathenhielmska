@@ -1,0 +1,155 @@
+.history-grid-container {
+  padding-top: 100px;
+  z-index: 10;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-auto-rows: auto;
+  grid-gap: 100px;
+}
+
+.history-grid-content {
+  background-color: #112e33;
+  z-index: 10;
+  color: white;
+  padding: 30px 25px;
+  -webkit-box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.75);
+}
+
+.history-grid-content h3 {
+  position: absolute;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 29px;
+}
+.history-grid-content p {
+  font-style: normal;
+  font-weight: lighter;
+  font-size: 18px;
+  line-height: 24px;
+  margin-left: 70px;
+}
+.history-grid-content-last {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.history-grid-content-last h3 {
+  top: 10px;
+}
+
+.history-grid-content-last p {
+  margin: 0;
+}
+#history-animation-ten {
+  height: 170px;
+}
+
+@media (min-width: 1025px) {
+  .history-grid-container {
+    padding: 100px 50px 0px 50px;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 100px;
+    gap: 0;
+    grid-template-areas:
+      "animation-one ."
+      "animation-one ."
+      ". animation-two"
+      ". animation-two"
+      "animation-three ."
+      "animation-three ."
+      ". animation-four"
+      ". animation-four"
+      "animation-five ."
+      "animation-five ."
+      ". animation-six"
+      ". animation-six"
+      "animation-seven ."
+      "animation-seven ."
+      ". animation-eight"
+      ". animation-eight"
+      "animation-nine ."
+      "animation-nine ."
+      "animation-ten animation-ten";
+  }
+
+  #history-animation-one {
+    grid-area: animation-one;
+  }
+  #history-animation-two {
+    grid-area: animation-two;
+  }
+  #history-animation-three {
+    grid-area: animation-three;
+  }
+  #history-animation-four {
+    grid-area: animation-four;
+  }
+  #history-animation-five {
+    grid-area: animation-last;
+  }
+  #history-animation-five {
+    grid-area: animation-five;
+  }
+  #history-animation-six {
+    grid-area: animation-six;
+  }
+  #history-animation-seven {
+    grid-area: animation-seven;
+  }
+  #history-animation-eight {
+    grid-area: animation-eight;
+  }
+  #history-animation-nine {
+    grid-area: animation-nine;
+  }
+  #history-animation-ten {
+    padding: 60px 150px 0px 150px;
+    grid-area: animation-ten;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #history-animation-ten h3 {
+    top: 50px;
+    left: calc(50% - 24px);
+  }
+  #history-animation-ten p {
+    margin-left: 0;
+  }
+  #history-animation-two h3,
+  #history-animation-four h3,
+  #history-animation-six h3,
+  #history-animation-eight h3 {
+    padding-left: 50px;
+  }
+  #history-animation-two,
+  #history-animation-four,
+  #history-animation-six,
+  #history-animation-eight {
+    padding: 60px 200px;
+  }
+
+  .history-grid-content {
+    padding: 60px 150px;
+    background-color: transparent;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+
+  .history-grid-content h3 {
+    left: 60px;
+    margin: 0;
+    padding-right: 20px;
+  }
+  .history-grid-content p {
+    margin: 0;
+  }
+}
