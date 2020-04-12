@@ -36,8 +36,9 @@ if (isset($_GET['cat'])) {
         'post_type' => 'event',
         'meta_query' => [
             'key'     => 'field_5e7a05e24567b',
-            'value'   => date('Ymd'),
-            'compare' => '>'
+            'value'   => current_time('Ymd'),
+            'compare' => '>',
+            'type' => 'DATE'
         ],
         'tax_query' => [
             [
@@ -48,19 +49,18 @@ if (isset($_GET['cat'])) {
         ]
 
     ]);
-    print_r($events->meta_query);
 } else {
     echo "hejsan";
     $events = new WP_Query([
         'post_type' => 'event',
         'meta_query' => [
             'key'     => 'field_5e7a05e24567b',
-            'value'   => date('Ymd'),
-            'compare' => '>'
+            'value'   => current_time('Ymd'),
+            'compare' => '>',
+            'type' => 'DATE'
         ],
 
     ]);
-    print_r($events->meta_query);
 }
 
 ?>
@@ -82,21 +82,26 @@ if (isset($_GET['cat'])) {
     if ($events->have_posts()) {
         while ($events->have_posts()) {
             $events->the_post();
-            print_r($events->request);
             $eventDate = explode(" ", date('F j Y', strtotime(get_field('event_start')))); ?>
             <div class="new_event">
-                <div class="new_event_header">
-                    <h1 class="new_event_title"><?php the_title() ?></h1>
-                    <p class="new_event_date">/ <?php echo "$eventDate[0] $eventDate[1]" ?> / <?php the_field('event_start_time') ?> </p>
+                <div class="new_event_image_container">
+                    <img class="new_event_image" src="<?php the_field('event_image') ?>" alt="">
                 </div>
-                <p class="new_event_desc"><?php the_field('event_sum') ?></p>
-                <div class="new_event_footer">
-                    <a class="new_event_button" href="<?php the_permalink() ?>">Läs mer</a>
-                    <?php if (get_the_terms($post, 'event_type') != false) : ?>
-                        <?php foreach (get_the_terms($post, 'event_type') as $eventType) : ?>
-                            <a class="new_event_tag" href="?cat=<?php echo $eventType->slug ?>"><?php echo $eventType->name ?></a>
-                        <?php endforeach; ?>
-                    <?php endif; ?>
+                <div class="new_event_content">
+                    <div class="new_event_header">
+                        <h1 class="new_event_title"><?php the_title() ?></h1>
+                        <p class="new_event_date">/ <?php echo "$eventDate[0] $eventDate[1]" ?> / <?php the_field('event_start_time') ?> / <?php if (get_the_terms($post, 'event_type') != false) : ?>
+                                <?php foreach (get_the_terms($post, 'event_type') as $eventType) : ?>
+                                    <a class="new_event_tag" href="?cat=<?php echo $eventType->slug ?>"><?php echo $eventType->name ?></a>
+                                <?php endforeach; ?>
+                            <?php endif; ?></p>
+
+                    </div>
+                    <p class="new_event_desc"><?php the_field('event_sum') ?></p>
+                    <div class="new_event_footer">
+                        <a class="new_event_button showOnDesktop" href="<?php the_permalink() ?>">Läs mer</a>
+
+                    </div>
                 </div>
             </div>
     <?php
