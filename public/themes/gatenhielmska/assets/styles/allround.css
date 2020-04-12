@@ -89,6 +89,9 @@
 .toggle-text {
   opacity: 1;
 }
+.about-information-txt-desktop {
+  display: none;
+}
 
 /* information-buttons */
 @media (min-width: 1025px) {
@@ -116,6 +119,22 @@
     margin-top: 20px;
     padding: 2em 6em;
     text-align: center;
+  }
+  .about-information-btn {
+    height: 150px;
+  }
+
+  .about-information-container {
+    background-color: var(--darkGreen);
+    z-index: 0;
+  }
+  .information-txt-container {
+    height: auto;
+  }
+  .about-information-txt {
+    background-color: var(--darkGreen);
+    color: white;
+    padding: 70px 150px;
   }
 
   /* desktop sub-nav */
