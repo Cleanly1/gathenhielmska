@@ -5,6 +5,8 @@
 
     <div class="page-header-contact"></div>
 
+    <div class="contact-big-g"></div>
+
     <div class="contact-grid">
         <div>
             <h3>Adress</h3>
@@ -26,6 +28,10 @@
             <h3>Joel Heirås</h3>
             <p>Samordnare & producent <br> <span>E-post:</span> joe.heirås@gmail.com <br> <span>Telefon:</span> 0760-983832</p>
         </div>
+    </div>
+
+    <div class="contact-form">
+
 
     </div>
 
