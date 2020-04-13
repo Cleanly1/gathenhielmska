@@ -93,6 +93,10 @@
   display: none;
 }
 
+.easter-egg-container {
+  display: none;
+}
+
 /* information-buttons */
 @media (min-width: 1025px) {
   body {
@@ -119,9 +123,11 @@
     margin-top: 20px;
     padding: 2em 6em;
     text-align: center;
+    color: black;
   }
   .about-information-btn {
     height: 150px;
+    border-bottom: 0.2px black solid;
   }
 
   .about-information-container {
@@ -173,4 +179,31 @@
     width: 100%;
   }
   /* desktop sub-nav end*/
+
+  .easter-egg-container {
+    width: 100%;
+    height: 100px;
+    background-color: var(--grey);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .easter-egg-container p {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 30px;
+    padding-left: 80px;
+  }
+  .easter-egg-container div {
+    padding-right: 80px;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    /* padding-right: 80px; */
+    background-image: url("./../images/egg.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 40px;
+  }
 }

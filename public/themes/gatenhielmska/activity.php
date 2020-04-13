@@ -16,9 +16,7 @@
             <?php } ?>
         </ul>
         <!-- desktop sub-nav -->
-    <div class="page-header-activity">
-
-    </div>
+    <div class="page-header-activity"></div>
     <div class="about-text-mobile">
         <div>
             <h3>Verksamheten</h3>

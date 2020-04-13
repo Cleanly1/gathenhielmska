@@ -16,7 +16,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 13px;
+  padding: 0px 13px;
   z-index: 50;
 }
 #logo {

@@ -2,7 +2,6 @@
 
 <?php get_header(); ?>
 
-<!-- mobile container start -->
 
 
 <div class="visit-container">
@@ -60,10 +59,11 @@ tidsenlig musik i autentisk miljö levandegörs händelser och liv från det fö
         </div>
     </div>
 
+    <div class="easter-egg-container">
+        <p>Måla ägg med oss i trädgården! Öppet hela påsklovet 11-14. Välkommen!</p>
+        <div></div>
 
-<!-- mobile container end -->
-
-
+    </div>
 
 
 
