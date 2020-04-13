@@ -28,6 +28,7 @@ add_action('wp_enqueue_scripts', function () {
     wp_enqueue_style('visit', get_stylesheet_directory_uri() . '/assets/styles/visit.css');
     wp_enqueue_style('activity', get_stylesheet_directory_uri() . '/assets/styles/activity.css');
     wp_enqueue_style('history', get_stylesheet_directory_uri() . '/assets/styles/history.css');
+    wp_enqueue_style('facilities', get_stylesheet_directory_uri() . '/assets/styles/facilities.css');
     wp_enqueue_style('allround', get_stylesheet_directory_uri() . '/assets/styles/allround.css');
     wp_enqueue_style('history-main', get_stylesheet_directory_uri() . '/assets/styles/history-main.css');
     wp_enqueue_style('history-grids', get_stylesheet_directory_uri() . '/assets/styles/history-grids.css');
