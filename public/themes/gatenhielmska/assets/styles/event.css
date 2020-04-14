@@ -1,12 +1,14 @@
 .filters {
   margin: 0;
-  padding: 0;
+  padding: 25px 0 0 0;
   display: flex;
   justify-content: space-evenly;
+  text-align: center;
 }
 
 .filters_items {
-  color: var(--darkGreen);
+  color: var(--white);
+  font-size: 13px;
 }
 
 .filters_items:hover {
@@ -16,14 +18,18 @@
 }
 
 .filters_container {
-  margin: 10px 5px;
+  text-align: center;
+  padding: 30px 18px;
+  background-color: var(--darkBlue);
+  color: var(--white);
 }
 
 .new_event {
+  position: relative;
   display: flex;
-  flex-flow: row-reverse nowrap;
+  align-items: flex-end;
   width: 100vw;
-  height: 35vh;
+  height: 50vh;
   background-color: #E0E0E0;
   padding: 0;
 }
@@ -37,17 +43,24 @@
 }
 
 .new_event_content {
-  width: 50vw;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-end;
+  align-items: flex-start;
+  position: absolute;
+  width: calc(100vw - 40px);
+  height: calc(50vh - 60px);
   margin: auto;
+  padding: 30px 20px;
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 .new_event_header {
   display: flex;
   flex-flow: column nowrap;
   align-items: flex-start;
-  padding: 0 10px;
-  width: 44vw;
-  margin: auto;
+  padding: 0;
+  width: 50vw;
 }
 
 .new_event_title {
@@ -64,31 +77,30 @@
   width: 100%;
   margin: 0;
   padding: 0 0 2px 0;
+  font-size: 15px;
   line-height: 32px;
-  border-bottom: 2px solid var(--darkGreen);
 }
 
 .new_event_desc {
-  margin: 10px calc(2vw + 10px);
-  font-size: 13px;
-  line-height: 16px;
-}
-
-.new_event_footer {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
-  margin: 0 2vw;
+  width: 100%;
+  font-size: 16px;
+  line-height: 19px;
 }
 
 .new_event_button {
-  width: 40vw;
-  padding: 5px 10vw;
+  font-family: Roboto Condensed;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  padding: 5px 23px;
+  margin: 5px;
   border-radius: 25px;
   background-color: var(--lightPink);
   transition-duration: 0.5s;
   color: var(--darkGreen);
   text-align: center;
+  text-transform: uppercase;
 }
 
 .new_event_button:hover {
@@ -98,6 +110,7 @@
 }
 
 .new_event_tag {
+  margin: auto;
   color: var(--darkGreen);
 }
 
@@ -108,17 +121,8 @@
 .new_event_image {
   position: relative;
   top: 0;
-  width: auto;
-  height: 100%;
-}
-
-.new_event_image_container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  width: 50vw;
-  height: auto;
+  width: 100%;
+  height: 50vh;
 }
 
 .preview_container {
