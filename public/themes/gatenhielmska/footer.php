@@ -38,6 +38,9 @@
 
 </div>
 <?php wp_footer(); ?>
+<script>
+wpcf7.cached = 0;
+</script>
 </body>
 
 </html>

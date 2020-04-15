@@ -4,6 +4,7 @@
 <div class="contact-container">
 
     <div class="page-header-contact"></div>
+    <div class="contact-desktop-divider"></div>
 
     <div class="contact-big-g"></div>
 
@@ -28,14 +29,12 @@
             <h3>Joel Heirås</h3>
             <p>Samordnare & producent <br> <span>E-post:</span> joe.heirås@gmail.com <br> <span>Telefon:</span> 0760-983832</p>
         </div>
+        <div class="contact-bird-img"></div>
     </div>
 
     <div class="contact-form">
-
-
+        <div class="contact-form-div"><h2>Intresserad av att boka ett rum?</h2><?php echo do_shortcode('[contact-form-7 id="30" title="Contact"]'); ?></div>
     </div>
-
-
 </div>
 
 
