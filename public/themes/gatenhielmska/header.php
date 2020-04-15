@@ -60,8 +60,8 @@
                         <?php foreach (get_pages(['sort_column' => 'menu_order', 'parent' => 0]) as $page) { ?>
                             <li id="menu-list-mobile">
                                 <a id="menu-links-mobile" <?php if (is_home() && $page->ID === get_option('page_for_posts') || is_page($page->ID)) {
-                                        echo 'active';
-                                    } ?> href="<?php echo get_permalink($page) ?>"><?php echo ($page->post_title); ?></a>
+                                                                echo 'active';
+                                                            } ?> href="<?php echo get_permalink($page) ?>"><?php echo ($page->post_title); ?></a>
                             </li>
                         <?php } ?>
                     </ul>
@@ -73,7 +73,7 @@
                     </svg>
                 </div>
 
-                    <img class="slider-bird" src="<?php echo get_template_directory_uri() . '/assets/images/bird1.png' ?>" alt="asd">
+                <img class="slider-bird" src="<?php echo get_template_directory_uri() . '/assets/images/bird1.png' ?>" alt="asd">
 
             </div>
             <!-- mobile container end -->
@@ -81,11 +81,11 @@
             <!-- SLIDER MENU end -->
             <div class="desktop-menu">
                 <ul>
-                    <?php foreach (get_pages(['sort_column' => 'menu_order' , 'parent' => 0]) as $page) { ?>
+                    <?php foreach (get_pages(['sort_column' => 'menu_order', 'parent' => 0]) as $page) { ?>
                         <li>
                             <a <?php if (is_home() && $page->ID === get_option('page_for_posts') || is_page($page->ID)) {
                                     echo 'active';
-                                } ?>" href="<?php echo get_permalink($page) ?>">  <?php echo ($page->post_title); ?></a>
+                                } ?>" href="<?php echo get_permalink($page) ?>"> <?php echo ($page->post_title); ?></a>
                         </li>
                     <?php } ?>
                 </ul>

@@ -1,0 +1,252 @@
+.filters {
+  margin: 0;
+  padding: 25px 0 0 0;
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+}
+
+.filters_items {
+  color: var(--white);
+  font-size: 13px;
+}
+
+.filters_items:hover {
+  text-decoration: none;
+  font-weight: 500;
+  color: black;
+}
+
+.filters_container {
+  text-align: center;
+  padding: 30px 18px;
+  background-color: var(--darkBlue);
+  color: var(--white);
+}
+
+.new_event {
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  width: 100vw;
+  height: 50vh;
+  background-color: #E0E0E0;
+  padding: 0;
+}
+
+.new_event_content {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-end;
+  align-items: flex-start;
+  position: absolute;
+  width: calc(100vw - 40px);
+  height: calc(50vh - 60px);
+  margin: auto;
+  padding: 30px 20px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.new_event_header {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  padding: 0;
+  width: 50vw;
+}
+
+.new_event_title {
+  width: 100%;
+  margin: 1vh 0 1vw 0;
+  padding: 0 0 0 0;
+  font-size: 27px;
+  line-height: 32px;
+  border-bottom: 2px solid var(--darkGreen);
+}
+
+.new_event_date {
+  display: flex;
+  width: 100%;
+  margin: 0;
+  padding: 0 0 2px 0;
+  font-size: 15px;
+  line-height: 32px;
+}
+
+.new_event_desc {
+  width: 100%;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.new_event_button {
+  font-family: Roboto Condensed;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  padding: 5px 23px;
+  margin: 29px 0 0 0;
+  border-radius: 25px;
+  background-color: var(--white);
+  transition-duration: 0.5s;
+  color: var(--darkGreen);
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.new_event_button:hover {
+  cursor: pointer;
+  color: var(--darkGreen);
+  text-decoration: none;
+}
+
+.new_event_tag {
+  margin: auto;
+  color: var(--darkGreen);
+}
+
+.new_event_tag:hover {
+  color: var(--darkBlue);
+}
+
+.new_event_image {
+  position: relative;
+  top: 0;
+  width: 100%;
+  height: auto;
+  min-height: 50vh;
+  opacity: 0.5;
+}
+
+.preview_container {
+  margin: 0;
+  padding: 0;
+  min-height: 30vh;
+  width: 100vw;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.showOnDesktop {
+  display: none;
+}
+
+@media (min-width: 1025px) {
+  .filters {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    align-items: space-between;
+  }
+
+  .filters_items {
+    color: var(--white);
+    font-size: 13px;
+    margin: 0 calc(100vw/24);
+  }
+
+  .filters_items:hover {
+    text-decoration: none;
+    font-weight: 500;
+    color: var(--grey);
+  }
+
+  .filters_container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 30px 18px;
+    background-color: var(--darkBlue);
+    color: var(--white);
+  }
+
+  .new_event {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    width: 48vw;
+    height: 80vh;
+    background: rgba(255, 255, 255, 0.3);
+    padding: 0;
+    margin: 1vw;
+  }
+
+  .new_event_header {
+    flex-flow: column nowrap;
+    width: 48vw;
+  }
+
+  .new_event_title {
+    padding: 0 20px;
+    margin: 0;
+    width: 100%;
+  }
+
+  .new_event_date {
+    padding: 0 20px;
+  }
+
+  .new_event_content {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    position: static;
+    width: 48vw;
+    height: 35vh;
+    margin: auto;
+    padding: 0;
+    background-color: rgba(255, 255, 255, 0);
+  }
+
+  .new_event_desc {
+    min-height: 60%;
+    width: 35vw;
+    padding: 0 20px;
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  .new_event_image {
+    position: relative;
+    top: -100%;
+    width: 100%;
+    height: auto;
+    opacity: 1;
+  }
+
+  .new_event_image_container {
+    display: block;
+    overflow: hidden;
+    width: 48vw;
+    height: 41.5%;
+  }
+
+  .new_event_button {
+    margin: 30px 0 0 20px;
+  }
+
+  .preview_container {
+    margin: 0;
+    padding: 0;
+    min-height: 30vh;
+    width: 100vw;
+    display: flex;
+    flex-flow: row wrap;
+    background-color: var(--grey);
+  }
+
+  .showOnDesktop {
+    display: block;
+  }
+
+  .hideOnDesktop {
+    display: none;
+  }
+}
+

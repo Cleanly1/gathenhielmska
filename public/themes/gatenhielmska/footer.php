@@ -1,4 +1,3 @@
-<a href="/wordpress/wp-admin/" class="mx-3 py-3">Login</a>
 <div class="footer">
     <div class="footer_parts">
         <img class="footer_logo" src="/themes/gatenhielmska/assets/images/gathenhielmskaLogo.svg" alt="">

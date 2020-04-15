@@ -110,15 +110,39 @@ console.log(footerWave);
 
 /***/ }),
 
+/***/ "./resources/styles/components/event.scss":
+/*!************************************************!*\
+  !*** ./resources/styles/components/event.scss ***!
+  \************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./resources/styles/front-page.scss":
+/*!******************************************!*\
+  !*** ./resources/styles/front-page.scss ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ 0:
-/*!********************************************************************!*\
-  !*** multi ./resources/scripts/app.js ./resources/styles/app.scss ***!
-  \********************************************************************/
+/*!************************************************************************************************************************************************!*\
+  !*** multi ./resources/scripts/app.js ./resources/styles/app.scss ./resources/styles/front-page.scss ./resources/styles/components/event.scss ***!
+  \************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! /Users/oskar/Desktop/Yrgo/Projekt/gathenhielmska/resources/scripts/app.js */"./resources/scripts/app.js");
-module.exports = __webpack_require__(/*! /Users/oskar/Desktop/Yrgo/Projekt/gathenhielmska/resources/styles/app.scss */"./resources/styles/app.scss");
+__webpack_require__(/*! /Users/oskar/Desktop/Yrgo/Projekt/gathenhielmska/resources/styles/app.scss */"./resources/styles/app.scss");
+__webpack_require__(/*! /Users/oskar/Desktop/Yrgo/Projekt/gathenhielmska/resources/styles/front-page.scss */"./resources/styles/front-page.scss");
+module.exports = __webpack_require__(/*! /Users/oskar/Desktop/Yrgo/Projekt/gathenhielmska/resources/styles/components/event.scss */"./resources/styles/components/event.scss");
 
 
 /***/ })
