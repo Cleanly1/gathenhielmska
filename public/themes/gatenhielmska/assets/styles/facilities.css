@@ -1,0 +1,185 @@
+.facilities-container {
+  width: 100%;
+}
+.page-header-facilities {
+  width: 100%;
+  height: 406px;
+  background-image: url("./../images/images/mobile/headers_mobile/header_mobile_5.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.facilities-book-room {
+  width: 100%;
+  height: 406px;
+  background-color: var(--grey);
+}
+.facilities-book-room div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.facilities-book-room h3 {
+  margin-top: 180px;
+}
+.facilities-container button {
+  width: 90px;
+  height: 40px;
+  background-color: white;
+  margin-top: 15px;
+  border-radius: 40px;
+  border: none;
+  font-style: normal;
+  font-weight: normal;
+  font-family: Avenir Next Condensed;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.facilities-img {
+  width: 100%;
+  height: 406px;
+  background-image: url("./../images/images/mobile/headers_mobile/header_mobile_5.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.facilities-bookinginformation {
+  height: 609px;
+  width: 100%;
+  background-color: var(--darkGrey);
+  color: white;
+}
+.facilities-bookinginformation div {
+  display: flex;
+  justify-content: center;
+}
+
+.facilities-bookinginformation h3 {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 38px;
+  padding: 30px 0px 20px 0px;
+}
+.facilities-bookinginformation p {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 24px;
+  padding: 0px 30px 30px 30px;
+}
+.facilities-bookinginformation button {
+  width: 130px;
+}
+.facilities-about-text {
+  width: 100%;
+  height: 406px;
+  color: #12495f;
+  font-style: normal;
+  display: flex;
+  align-items: center;
+}
+.facilities-about-text h3 {
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 29px;
+  text-transform: capitalize;
+
+  order: 0;
+  align-self: center;
+  margin: 0px 20px;
+}
+.facilities-about-text p {
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 24px;
+  margin-top: 20px;
+  padding: 1.2em;
+}
+.facilities-br {
+  display: inline-block;
+}
+
+@media (min-width: 1025px) {
+  .page-header-facilities {
+    background-image: url("./../images/images/desktop/headers_desktop/header_desktop_5.jpg");
+  }
+  .facilities-book-room {
+    height: 250px;
+  }
+  .facilities-book-room h3 {
+    margin-top: 100px;
+    color: var(--darkBlue);
+    font-size: 23px;
+    font-weight: bold;
+  }
+  .facilities-container button {
+    width: 90px;
+    height: 40px;
+    background-color: white;
+    margin-top: 15px;
+    border-radius: 40px;
+    border: none;
+    font-style: normal;
+    font-weight: normal;
+    font-family: Avenir Next Condensed;
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .facilities-img-txt-container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-auto-rows: auto;
+  }
+  #facilities-grid-one {
+    grid-column-start: 1;
+    grid-row-start: 2;
+  }
+  #facilities-grid-two {
+    grid-column-start: 1;
+    grid-row-start: 4;
+  }
+  #facilities-grid-three {
+    grid-column-start: 1;
+    grid-row-start: 6;
+  }
+  .facilities-about-text p {
+    color: black;
+    padding: 1.2em;
+  }
+
+  .facilities-img {
+    width: 100%;
+    height: 406px;
+    background-image: url("./../images/images/mobile/headers_mobile/header_mobile_5.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .facilities-bookinginformation {
+    height: 400px;
+    width: 100%;
+    background-color: var(--darkGrey);
+    color: white;
+  }
+  .facilities-bookinginformation h3 {
+    margin-top: 40px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 38px;
+    padding: 30px 0px 20px 0px;
+  }
+  .facilities-bookinginformation p {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 27px;
+    padding: 0px 160px 30px 160px;
+  }
+  .facilities-bookinginformation button {
+    width: 130px;
+  }
+  .facilities-br {
+    display: none;
+  }
+}
