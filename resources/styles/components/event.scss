@@ -1,3 +1,10 @@
+.background_logo {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 .filters{
   margin: 0;
   padding: 25px 0 0 0;
@@ -24,7 +31,7 @@
   }
 }
 
-.new_event{
+.event{
   overflow: hidden;
   position: relative;
   display: flex;
@@ -66,12 +73,19 @@
     }
 
     &_date {
-      display: flex;
-      width: 100%;
+      width: auto;
       margin: 0;
-      padding: 0 0 2px 0;
       font-size: 15px;
       line-height: 32px;
+    }
+
+    &_info {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      align-items: center;
+      width: 44vw;
+      padding: 0 10px;
     }
 
     &_desc {
@@ -111,14 +125,17 @@
     }
     &_image {
       position: relative;
-      top: 0;
       width: 100%;
-      height: auto;
-      min-height: 50vh;
-      opacity: 0.5;
+      height: initial;
+      opacity: 0.8;
 
-
-
+      &_container {
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        width: 100vw;
+        height: 100%;
+      }
     }
   }
 
@@ -132,8 +149,67 @@
     width: 100vw;
     display: flex;
     flex-flow: column nowrap;
+    background-color: var(--grey);
   }
 }
+
+
+.single_event {
+  display: flex;
+  flex-flow: column nowrap;
+  background-color: var(--grey);
+
+  &_back {
+    display: flex;
+    align-items: center;
+    height: 30px;
+    &_link {
+
+      color: var(--darkBlue);
+
+    }
+  }
+
+  &_image {
+    width: 100vw;
+    margin: 0;
+  }
+
+  &_header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(100vw - 60px);
+    padding: 10px 30px;
+    color: var(--white);
+    background-color: var(--darkBlue);
+  }
+
+  &_desc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: auto;
+    min-height: calc(35vh - 40px);
+    padding: 20px 10px;
+  }
+
+  &_footer {
+    width: 100vw;
+    height: 35vh;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    background-color: #C4C4C4;
+
+    &_item{
+      margin: 12px;
+    }
+  }
+}
+
 
 .showOnDesktop {
   display: none;
@@ -166,13 +242,14 @@
       flex-flow: row nowrap;
       justify-content: space-evenly;
       align-items: center;
+      width: calc(100vw - 36px);
       padding: 30px 18px;
       background-color: var(--darkBlue);
       color: var(--white);
     }
   }
 
-  .new_event{
+  .event{
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-between;
@@ -181,6 +258,14 @@
     background: rgba(255, 255, 255, 0.3);
     padding: 0;
     margin: 1vw;
+
+    &:nth-child(1n + 2){
+      margin: 0 1vw;
+    }
+
+    &:last-child {
+      margin: 0 1vw 1vw 1vw;
+    }
 
     &_header {
       flex-flow: column nowrap;
@@ -197,6 +282,19 @@
       padding: 0 20px;
     }
 
+    &_location {
+      display: block;
+    }
+
+    &_tag{
+      display: block;
+      margin: auto;
+      color: var(--darkGreen);
+      &:hover {
+        color: var(--darkBlue);
+      }
+    }
+
     &_content {
       display: flex;
       flex-flow: column nowrap;
@@ -205,14 +303,14 @@
       position: static;
       width: 48vw;
       height: 35vh;
-      margin: auto;
+      margin: 0 0 auto 0;
       padding: 0;
       background-color: rgba(255, 255, 255, 0);
     }
 
     &_desc {
       min-height: 60%;
-      width: 35vw;
+      width: 30vw;
       padding: 0 20px;
       font-size: 16px;
       line-height: 26px;
@@ -220,13 +318,13 @@
 
     &_image {
       position: relative;
-      top: -100%;
       width: 100%;
-      height: auto;
+      height: initial;
       opacity: 1;
 
       &_container {
-        display: block;
+        display: flex;
+        align-items: center;
         overflow: hidden;
         width: 48vw;
         height: 41.5%;
@@ -234,7 +332,15 @@
     }
 
     &_button {
-      margin: 30px 0 0 20px;
+      margin: 0;
+      padding: 5px 23px;
+      max-height: 20px;
+    }
+
+    &_footer {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
     }
   }
 
@@ -249,10 +355,6 @@
       flex-flow: row wrap;
       background-color: var(--grey);
     }
-  }
-
-  .showOnDesktop {
-    display: block;
   }
 
   .hideOnDesktop {
