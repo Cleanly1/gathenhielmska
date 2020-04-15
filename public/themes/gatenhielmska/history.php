@@ -5,7 +5,7 @@
 <!-- mobile container start -->
 <div class="about-line"></div>
         <ul class="about-desktop-sub-nav">
-            <?php foreach (get_pages(['sort_column' => 'menu_order', 'parent' => 0]) as $page) { ?>
+            <?php foreach (get_pages(['sort_column' => 'menu_order', 'parent' => 10]) as $page) { ?>
                 <?php foreach (get_pages(['sort_column' => 'menu_order', 'sort_order' => 'desc', 'parent' => $page->ID]) as $childPage) { ?>
                     <li class="desktop-sub-nav-list">
                         <a href="<?php echo get_page_link($childPage->ID); ?>"><?php echo $childPage->post_title; ?></a>

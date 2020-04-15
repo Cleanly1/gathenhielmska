@@ -35,6 +35,7 @@ add_action('wp_enqueue_scripts', function () {
     wp_enqueue_style('event', get_stylesheet_directory_uri() . '/assets/styles/event.css');
     wp_enqueue_style('history-main', get_stylesheet_directory_uri() . '/assets/styles/history-main.css');
     wp_enqueue_style('history-grids', get_stylesheet_directory_uri() . '/assets/styles/history-grids.css');
+    wp_enqueue_style('gallery', get_stylesheet_directory_uri() . '/assets/styles/gallery.css');
     wp_enqueue_script('script', get_template_directory_uri() . '/assets/scripts/app.js');
     wp_enqueue_script('sub-nav', get_template_directory_uri() . '/assets/scripts/sub-nav.js');
     wp_enqueue_script('history-main-js', get_template_directory_uri() . '/assets/scripts/history-main.js');
@@ -78,3 +79,4 @@ require get_template_directory() . "/post-types/event.php";
 require get_template_directory() . "/fields/event.php";
 
 require get_template_directory() . "/taxonomies/event-types.php";
+
