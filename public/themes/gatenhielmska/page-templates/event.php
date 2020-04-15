@@ -20,25 +20,25 @@ foreach ($terms as $term) {
 };
 $totalEvents = 0;
 $category = '';
-?>
 
-
-<?php
 if (isset($_GET['cat'])) {
     $category = trim(filter_var($_GET['cat'], FILTER_SANITIZE_STRING));
-
-    echo "hej";
     if (!in_array($category, $arrayOfSlugs)) { ?>
         <h1>No events for the search: <?php echo $category ?> </h1>
 <?php
     };
     $events = new WP_Query([
         'post_type' => 'event',
+        'meta_key' => 'event_start',
+        'orderby' => 'meta_value_num',
+        'order' => 'ASC',
         'meta_query' => [
-            'key'     => 'field_5e7a05e24567b',
-            'value'   => current_time('Ymd'),
-            'compare' => '>',
-            'type' => 'DATE'
+            [
+                'key'     => 'event_start',
+                'value'   => current_time('Ymd'),
+                'compare' => '>=',
+                'type' => 'DATE'
+            ]
         ],
         'tax_query' => [
             [
@@ -50,14 +50,18 @@ if (isset($_GET['cat'])) {
 
     ]);
 } else {
-    echo "hejsan";
     $events = new WP_Query([
         'post_type' => 'event',
+        'meta_key' => 'event_start',
+        'orderby' => 'meta_value_num',
+        'order' => 'ASC',
+
         'meta_query' => [
-            'key'     => 'field_5e7a05e24567b',
-            'value'   => current_time('Ymd'),
-            'compare' => '>',
-            'type' => 'DATE'
+            [
+                'key'     => 'event_start',
+                'value'   => current_time('Ymd'),
+                'compare' => '>=',
+            ]
         ],
 
     ]);
@@ -69,7 +73,7 @@ if (isset($_GET['cat'])) {
     <ul class="filters">
         <a class="filters_items <?php echo $category == "" ? "active" : "" ?>" href="?cat="> Alla </a>
         <?php foreach ($terms as $term) : ?>
-            <a class="filters_items <?php echo $category == $term->slug ? "active" : "" ?>" href="?cat=<?php echo $term->slug ?>">/ <?php echo $term->name ?> </a>
+            <a class="filters_items <?php echo $category == $term->slug ? "active" : "" ?>" href="?cat=<?php echo $term->slug ?>"><span class="hideOnDesktop">/</span> <?php echo $term->name ?> </a>
         <?php
             $totalEvents += $term->count;
         endforeach;
@@ -84,11 +88,14 @@ if (isset($_GET['cat'])) {
             $events->the_post();
             $eventDate = explode(" ", date('F j Y', strtotime(get_field('event_start')))); ?>
             <div class="new_event">
-                <img class="new_event_image" src="<?php the_field('event_image') ?>" alt="">
+                <img class="new_event_image hideOnDesktop" src="<?php the_field('event_image') ?>" alt="">
+                <div class="new_event_image_container showOnDesktop">
+                    <img class="new_event_image" src="<?php the_field('event_image') ?>" alt="">
+                </div>
                 <div class="new_event_content">
                     <div class="new_event_header">
                         <h1 class="new_event_title"><?php the_title() ?></h1>
-                        <p class="new_event_date">/ <?php echo "$eventDate[0] $eventDate[1]" ?> / <?php the_field('event_start_time') ?>
+                        <p class="new_event_date">/ <?php echo "$eventDate[0] $eventDate[1]" ?> / <?php the_field('event_start_time') ?> / <a href=""><?php get_the_terms($post, 'event_type') ?></a> </p>
                     </div>
                     <p class="new_event_desc"><?php the_field('event_sum') ?></p>
                     <a class="new_event_button" href="<?php the_permalink() ?>">Läs mer</a>
