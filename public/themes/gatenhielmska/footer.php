@@ -18,7 +18,7 @@
         <ul class="footer_social">
             <a class="footer_social_item" href=""><img class="footer_social_item_images" src="/themes/gatenhielmska/assets/images/facebook.svg" alt="facebook"></a>
             <a class="footer_social_item" href=""><img class="footer_social_item_images" src="/themes/gatenhielmska/assets/images/instagram.svg" alt="instagram"></a>
-            <a class="footer_social_item" href=""><img class="footer_social_item_images" src="/themes/gatenhielmska/assets/images/twitter.svg" alt="twitter"></a>
+            <a class="footer_social_item" href=""><img class="footer_social_item_images" src="/themes/gatenhielmska/assets/images/youtube.svg" alt="youtube"></a>
         </ul>
         <ul class="footer_social"><a class="footer_info" href="">Om Webbplatsen</a> / <a class="footer_info" href="">Personuppgifter</a> / <a class="footer_info" href="">Allmänna Villkor</a></ul>
     </div>
@@ -39,7 +39,7 @@
 </div>
 <?php wp_footer(); ?>
 <script>
-wpcf7.cached = 0;
+    wpcf7.cached = 0;
 </script>
 </body>
 
