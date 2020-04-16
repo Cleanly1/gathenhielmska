@@ -20,6 +20,15 @@
         <div class="gallery-separator">
             <p>Bilder från Gathenhielmska Huset</p>
     </div>
+     <!-- Gallery start -->
+
+     <div class="gallery-container">
+      <?php echo do_shortcode('[ngg src="galleries" ids="3" display="basic_thumbnail" thumbnail_crop="0"]'); ?>
+    </div>
+
+
+
+<!-- Gallery end -->
 
 </div>
 

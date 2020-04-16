@@ -24,14 +24,7 @@
     <!-- Gallery start -->
 
     <div class="gallery-container">
-        <h1>hej</h1>
-        <h1>hej</h1>
-        <h1>hej</h1>
-        <h1>hej</h1>
-        <h1>hej</h1>
-        <h1>hej</h1>
-        <h1>hej</h1>
-        <h1>hej</h1>
+      <?php echo do_shortcode('[ngg src="galleries" ids="4" display="basic_thumbnail" thumbnail_crop="0"]'); ?>
     </div>
 
 
