@@ -1045,19 +1045,20 @@
                 "wordplate",
                 "wordpress"
             ],
+            "abandoned": "https://vinkla.dev/administration-ui",
             "time": "2019-08-08T13:02:18+00:00"
         },
         {
             "name": "wpackagist-plugin/advanced-custom-fields",
-            "version": "5.8.8",
+            "version": "5.8.9",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/advanced-custom-fields/",
-                "reference": "tags/5.8.8"
+                "reference": "tags/5.8.9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/advanced-custom-fields.5.8.8.zip"
+                "url": "https://downloads.wordpress.org/plugin/advanced-custom-fields.5.8.9.zip"
             },
             "require": {
                 "composer/installers": "~1.0"

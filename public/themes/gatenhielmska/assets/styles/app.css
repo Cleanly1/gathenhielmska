@@ -1,5 +1,4 @@
 /* WordPlate */
-
 :root {
   --lightPink: #FFEDE9;
   --darkBlue: #12495F;
@@ -25,4 +24,3 @@ a {
   color: var(--darkBlue);
   font-weight: 600;
 }
-
