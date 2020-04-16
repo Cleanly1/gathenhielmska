@@ -61,7 +61,7 @@
   align-items: flex-end;
   width: 100vw;
   height: 50vh;
-  background-color: #E0E0E0;
+  background-color: #e0e0e0;
   padding: 0;
 }
 .front_page_event_content {
@@ -309,7 +309,7 @@
     flex-flow: column nowrap;
     width: 30vw;
     height: 82vh;
-    background-color: #EEEEEE;
+    background-color: #eeeeee;
   }
   .front_page_event_container {
     display: flex;
