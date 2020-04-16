@@ -31,8 +31,8 @@ add_action('wp_enqueue_scripts', function () {
     wp_enqueue_style('facilities', get_stylesheet_directory_uri() . '/assets/styles/facilities.css');
     wp_enqueue_style('contact', get_stylesheet_directory_uri() . '/assets/styles/contact.css');
     wp_enqueue_style('allround', get_stylesheet_directory_uri() . '/assets/styles/allround.css');
-    wp_enqueue_style('frontPage', get_stylesheet_directory_uri() . '/assets/styles/front-page.css');
     wp_enqueue_style('event', get_stylesheet_directory_uri() . '/assets/styles/event.css');
+    wp_enqueue_style('frontPage', get_stylesheet_directory_uri() . '/assets/styles/front-page.css');
     wp_enqueue_style('history-main', get_stylesheet_directory_uri() . '/assets/styles/history-main.css');
     wp_enqueue_style('history-grids', get_stylesheet_directory_uri() . '/assets/styles/history-grids.css');
     wp_enqueue_style('gallery', get_stylesheet_directory_uri() . '/assets/styles/gallery.css');
@@ -84,4 +84,3 @@ require get_template_directory() . "/post-types/event.php";
 require get_template_directory() . "/fields/event.php";
 
 require get_template_directory() . "/taxonomies/event-types.php";
-
