@@ -44,7 +44,11 @@ add_action('wp_enqueue_scripts', function () {
     wp_enqueue_script('navbar', get_template_directory_uri() . '/assets/scripts/navbar.js', false, false, true);
 });
 
-
+function add_google_fonts()
+{
+    wp_enqueue_style('robotoCondensed', 'https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap', false);
+}
+add_action('wp_enqueue_scripts', 'add_google_fonts');
 
 function add_theme_caps()
 {

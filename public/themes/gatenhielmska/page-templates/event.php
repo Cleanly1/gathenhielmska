@@ -27,7 +27,7 @@ if (isset($_GET['cat'])) {
         <h1>No events for the search: <?php echo $category ?> </h1>
 <?php
     };
-    $events = new WP_Query([
+    $posts = new WP_Query([
         'post_type' => 'event',
         'meta_key' => 'event_start',
         'orderby' => 'meta_value_num',
@@ -50,12 +50,11 @@ if (isset($_GET['cat'])) {
 
     ]);
 } else {
-    $events = new WP_Query([
+    $posts = new WP_Query([
         'post_type' => 'event',
         'meta_key' => 'event_start',
         'orderby' => 'meta_value_num',
         'order' => 'ASC',
-
         'meta_query' => [
             [
                 'key'     => 'event_start',
@@ -68,6 +67,11 @@ if (isset($_GET['cat'])) {
 }
 
 ?>
+<div class="page_header_program">
+    <div></div>
+    <h2>Program</h2>
+    <div></div>
+</div>
 <div class="filters_container">
     Filter /
     <ul class="filters">
@@ -81,24 +85,37 @@ if (isset($_GET['cat'])) {
     </ul>
 </div>
 <div class="preview_container">
+    <img class="background_logo" src="<?php echo get_template_directory_uri() ?>/assets/images/event-background.svg" alt="">
     <?php
-
-    if ($events->have_posts()) {
-        while ($events->have_posts()) {
-            $events->the_post();
-            $eventDate = explode(" ", date('F j Y', strtotime(get_field('event_start')))); ?>
-            <div class="new_event">
-                <img class="new_event_image hideOnDesktop" src="<?php the_field('event_image') ?>" alt="">
-                <div class="new_event_image_container showOnDesktop">
-                    <img class="new_event_image" src="<?php the_field('event_image') ?>" alt="">
+    if ($posts->have_posts()) {
+        while ($posts->have_posts()) {
+            $posts->the_post();
+            $eventDate = explode(" ", date('F j Y', strtotime(get_field('event_start'))));
+            $terms = get_the_terms($post, 'event_type');
+    ?>
+            <div class="event">
+                <div class="event_image_container">
+                    <img class="event_image" src="<?php the_field('event_image') ?>" alt="">
                 </div>
-                <div class="new_event_content">
-                    <div class="new_event_header">
-                        <h1 class="new_event_title"><?php the_title() ?></h1>
-                        <p class="new_event_date">/ <?php echo "$eventDate[0] $eventDate[1]" ?> / <?php the_field('event_start_time') ?> / <a href=""><?php get_the_terms($post, 'event_type') ?></a> </p>
+                <div class="event_content">
+                    <div class="event_header">
+                        <h1 class="event_title"><?php the_title() ?></h1>
+                        <div class="event_info">
+                            <p class="event_date">/ <?php echo "$eventDate[0] $eventDate[1]" ?> / <?php the_field('event_start_time') ?></p>
+                            <?php if (get_the_terms($post, 'event_type') != false) : ?>
+                                <?php foreach (get_the_terms($post, 'event_type') as $eventType) : ?>
+                                    <a class="event_tag showOnDesktop" href="?cat=<?php echo $eventType->slug ?>"> <?php echo $eventType->name ?></a>
+                                <?php endforeach; ?>
+                            <?php endif; ?>
+                            <p class="event_location showOnDesktop">/ <?php the_field('location') ?></p>
+                        </div>
                     </div>
-                    <p class="new_event_desc"><?php the_field('event_sum') ?></p>
-                    <a class="new_event_button" href="<?php the_permalink() ?>">Läs mer</a>
+                    <div class="event_footer showOnDesktop">
+                        <p class="event_desc"><?php the_field('event_sum') ?></p>
+                        <a class="event_button" href="<?php the_permalink() ?>">Läs mer</a>
+                    </div>
+                    <p class="event_desc hideOnDesktop"><?php the_field('event_sum') ?></p>
+                    <a class="event_button hideOnDesktop" href="<?php the_permalink() ?>">Läs mer</a>
                 </div>
             </div>
         <?php
@@ -106,7 +123,7 @@ if (isset($_GET['cat'])) {
     } else {
         if (get_the_terms($post, 'event_type') != false) : ?>
             <?php foreach (get_the_terms($post, 'event_type') as $eventType) : ?>
-                <a class="new_event_tag" href="?cat=<?php echo $eventType->slug ?>"> <?php echo $eventType->name ?></a>
+                <a class="event_tag" href="?cat=<?php echo $eventType->slug ?>"> <?php echo $eventType->name ?></a>
             <?php endforeach; ?>
         <?php endif; ?>
     <?php
