@@ -5,13 +5,9 @@ plugins/*
 upgrade
 uploads
 wordpress
-
-
-
 node_modules
 vendor
 .env
-
 .DS_Store
 .DS_Store
 public/themes/gatenhielmska/assets/.DS_Store
