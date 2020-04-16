@@ -87,12 +87,6 @@
   border: none;
   padding: 10px;
 }
-.ngg-gallery-thumbnail {
-}
-.ngg-gallery-thumbnail a {
-}
-.ngg-gallery-thumbnail img {
-}
 
 @media (min-width: 1025px) {
   .gallery-desktop-sub-nav {

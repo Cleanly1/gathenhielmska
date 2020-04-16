@@ -6,4 +6,14 @@ upgrade
 uploads
 wordpress
 
+
+
+node_modules
+vendor
+.env
+
 .DS_Store
+.DS_Store
+public/themes/gatenhielmska/assets/.DS_Store
+public/themes/gatenhielmska/assets/images/.DS_Store
+public/themes/gatenhielmska/assets/images/.DS_Store
