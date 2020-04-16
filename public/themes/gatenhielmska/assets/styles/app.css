@@ -1,16 +1,14 @@
 /* WordPlate */
 :root {
-  --lightPink: #FFEDE9;
   --darkBlue: #12495F;
   --darkGreen: #112E33;
-  --darkPink: #EDC8BF;
   --grey: #D1D6D5;
   --white: #FFFFFF;
   --darkGrey: #9BA8A6;
 }
 
 * {
-  font-family: Avenir Next Condensed;
+  font-family: Minion Pro;
   font-style: normal;
   font-weight: normal;
   margin: 0;
