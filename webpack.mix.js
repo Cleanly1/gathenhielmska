@@ -22,11 +22,7 @@ mix.setPublicPath(`public/themes/${theme}/assets`);
 mix
   .sass("resources/styles/app.scss", "styles")
   // .sass("resources/styles/components/event.scss", "styles")
-<<<<<<< HEAD
   // .sass("resources/styles/front-page.scss", "styles")
-=======
-  .sass("resources/styles/front-page.scss", "styles")
->>>>>>> 1eff5e746047106faf208131ea7d7a3bf68160b1
   // .sass("resources/styles/components/footer.scss", "styles")
   .options({
     processCssUrls: false
