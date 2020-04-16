@@ -1,8 +1,27 @@
+.gallery-desktop-sub-nav {
+  padding-inline-start: 0;
+  height: 60px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  z-index: 10;
+}
+
+.gallery-desktop-sub-nav li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #d1d6d5;
+}
+.gallery-desktop-sub-nav li a {
+  color: black;
+}
+
 .page-header-gallery {
   width: 100%;
   height: 406px;
   background-color: #9ba8a6;
   position: relative;
+  overflow: hidden;
 }
 
 .page-header-gallery div:first-child {
@@ -14,15 +33,17 @@
   background-repeat: no-repeat;
   background-position: center;
   opacity: 0.3;
+  z-index: 0;
 }
 .page-header-gallery div:last-child {
   position: absolute;
   bottom: -150px;
-  width: 100%;
+  width: 300px;
   height: 100%;
   background-image: url("./../images/bird1.png");
   background-repeat: no-repeat;
   background-size: 260px;
+  z-index: 0;
 }
 .page-header-gallery h2 {
   position: absolute;
@@ -32,4 +53,86 @@
   text-align: center;
   top: 45%;
   font-size: 40px;
+  text-transform: uppercase;
+}
+.gallery-separator {
+  width: 100%;
+  height: 180px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.gallery-separator p {
+  color: var(--darkBlue);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 29px;
+  text-align: center;
+  padding: 50px;
+}
+.gallery-container {
+  padding: 10px;
+}
+.ngg-galleryoverview {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.ngg-gallery-thumbnail-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  padding: 10px;
+}
+
+@media (min-width: 1025px) {
+  .gallery-desktop-sub-nav {
+    height: 90px;
+  }
+
+  .gallery-desktop-sub-nav li a:after {
+    content: "";
+    width: 0px;
+    height: 1px;
+    display: block;
+    background: black;
+    transform-origin: center;
+    transition: 300ms;
+  }
+  .gallery-desktop-sub-nav li a:hover:after {
+    width: 100%;
+  }
+
+  .page-header-gallery div:first-child {
+    background-size: 1200px;
+  }
+  .page-header-gallery div:last-child {
+    width: 450px;
+    bottom: 30px;
+    right: 250px;
+    background-size: 480px;
+  }
+  .page-header-gallery h2 {
+    font-size: 120px;
+    top: 40%;
+  }
+  .gallery-separator {
+    background-color: var(--darkBlue);
+  }
+  .gallery-separator p {
+    color: white;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    padding: 50px;
+  }
+
+  .ngg-galleryoverview {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }

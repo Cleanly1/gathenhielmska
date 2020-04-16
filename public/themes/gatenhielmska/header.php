@@ -45,13 +45,13 @@
             <div class="slider-menu">
                 <div class="menu-dropdown">
                     <ul>
-                        <?php foreach (get_pages(['sort_column' => 'menu_order', 'parent' => 0]) as $page) { ?>
-                            <?php foreach (get_pages(['sort_column' => 'menu_order', 'sort_order' => 'desc', 'parent' => $page->ID]) as $childPage) { ?>
+
+                            <?php foreach (get_pages(['sort_column' => 'menu_order', 'sort_order' => 'desc', 'parent' => 10]) as $childPage) { ?>
                                 <li>
                                     <a href="<?php echo get_page_link($childPage->ID); ?>"><?php echo $childPage->post_title; ?></a>
                                 </li>
                             <?php } ?>
-                        <?php } ?>
+
                     </ul>
                 </div>
 

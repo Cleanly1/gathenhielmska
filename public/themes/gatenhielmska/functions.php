@@ -38,6 +38,7 @@ add_action('wp_enqueue_scripts', function () {
     wp_enqueue_style('gallery', get_stylesheet_directory_uri() . '/assets/styles/gallery.css');
     wp_enqueue_script('script', get_template_directory_uri() . '/assets/scripts/app.js');
     wp_enqueue_script('sub-nav', get_template_directory_uri() . '/assets/scripts/sub-nav.js');
+    wp_enqueue_script('sub-nav-gallery', get_template_directory_uri() . '/assets/scripts/sub-nav-gallery.js');
     wp_enqueue_script('history-main-js', get_template_directory_uri() . '/assets/scripts/history-main.js');
     wp_enqueue_script('information-btn-visit', get_template_directory_uri() . '/assets/scripts/information-btn-activity.js');
     wp_enqueue_script('information-btn-history', get_template_directory_uri() . '/assets/scripts/information-btn-history.js');

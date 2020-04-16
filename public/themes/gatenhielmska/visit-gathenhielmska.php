@@ -7,13 +7,11 @@
 <div class="visit-container">
     <div class="about-line"></div>
         <ul class="about-desktop-sub-nav">
-            <?php foreach (get_pages(['sort_column' => 'menu_order', 'parent' => 0]) as $page) { ?>
-                <?php foreach (get_pages(['sort_column' => 'menu_order', 'sort_order' => 'desc', 'parent' => $page->ID]) as $childPage) { ?>
+                <?php foreach (get_pages(['sort_column' => 'menu_order', 'sort_order' => 'desc', 'parent' => 10]) as $childPage) { ?>
                     <li class="desktop-sub-nav-list">
                         <a class="desktop-sub-nav-a" href="<?php echo get_page_link($childPage->ID); ?>"><?php echo $childPage->post_title; ?></a>
                     </li>
                 <?php } ?>
-            <?php } ?>
         </ul>
     <div class="page-header-visit"></div>
     <div class="about-text-mobile">
