@@ -21,6 +21,23 @@
             <p>Bilder från Gathenhielmska Huset</p>
     </div>
 
+    <!-- Gallery start -->
+
+    <div class="gallery-container">
+        <h1>hej</h1>
+        <h1>hej</h1>
+        <h1>hej</h1>
+        <h1>hej</h1>
+        <h1>hej</h1>
+        <h1>hej</h1>
+        <h1>hej</h1>
+        <h1>hej</h1>
+    </div>
+
+
+
+    <!-- Gallery end -->
+
 </div>
 
 <?php get_footer(); ?>

@@ -53,6 +53,7 @@
   text-align: center;
   top: 45%;
   font-size: 40px;
+  text-transform: uppercase;
 }
 .gallery-separator {
   width: 100%;
@@ -70,6 +71,12 @@
   line-height: 29px;
   text-align: center;
   padding: 50px;
+}
+.gallery-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-auto-rows: max-content;
 }
 @media (min-width: 1025px) {
   .gallery-desktop-sub-nav {
@@ -99,7 +106,8 @@
     background-size: 480px;
   }
   .page-header-gallery h2 {
-    font-size: 60px;
+    font-size: 120px;
+    top: 40%;
   }
   .gallery-separator {
     background-color: var(--darkBlue);
