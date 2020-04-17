@@ -242,7 +242,7 @@
   }
 
   .showOnDesktop {
-    display: block;
+    display: inherit;
   }
 
   .front_page_header {

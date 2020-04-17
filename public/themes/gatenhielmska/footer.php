@@ -19,17 +19,25 @@
     </div>
     <div class="footer_parts hide_on_mobile">
         <ul class="footer_social">
-            <a class="footer_social_item" href=""><img class="footer_social_item_images" src="/themes/gatenhielmska/assets/images/facebook.svg" alt="facebook"></a>
-            <a class="footer_social_item" href=""><img class="footer_social_item_images" src="/themes/gatenhielmska/assets/images/instagram.svg" alt="instagram"></a>
-            <a class="footer_social_item" href=""><img class="footer_social_item_images" src="/themes/gatenhielmska/assets/images/youtube.svg" alt="youtube"></a>
+            <a class="footer_social_item" href="https://www.facebook.com/Gathenhielmska-Huset-103055504510437/">
+                <img class="footer_social_item_images" src="/themes/gatenhielmska/assets/images/facebook.svg" alt="facebook">
+            </a>
+            <a class="footer_social_item" href="https://www.instagram.com/gathenhielmska.huset/">
+                <img class="footer_social_item_images" src="/themes/gatenhielmska/assets/images/instagram.svg" alt="instagram">
+            </a>
+            <a class="footer_social_item" href="https://www.youtube.com/results?search_query=gathenhielmska+huset">
+                <img class="footer_social_item_images" src="/themes/gatenhielmska/assets/images/youtube.svg" alt="youtube">
+            </a>
         </ul>
-        <ul class="footer_social"><a class="footer_info" href="">Om Webbplatsen</a> / <a class="footer_info" href="">Personuppgifter</a> / <a class="footer_info" href="">Allmänna Villkor</a></ul>
+        <ul class="footer_social">
+            <a class="footer_info" href="">Om Webbplatsen</a> / <a class="footer_info" href="">Personuppgifter</a> / <a class="footer_info" href="">Allmänna Villkor</a>
+        </ul>
     </div>
     <div class="footer_parts">
         <ul class="footer_social hide_on_desktop">
-            <a class="footer_social_item" href="hej.se">Instagram</a>
-            <a class="footer_social_item" href="">Facebook</a>
-            <a class="footer_social_item" href="">Twitter</a>
+            <a class="footer_social_item" href="https://www.instagram.com/gathenhielmska.huset/">Instagram</a>
+            <a class="footer_social_item" href="https://www.facebook.com/Gathenhielmska-Huset-103055504510437/">Facebook</a>
+            <a class="footer_social_item" href="https://www.youtube.com/results?search_query=gathenhielmska+huset">Youtube</a>
         </ul>
         <img class="footer_flower" src="/themes/gatenhielmska/assets/images/blomma.png" alt="">
 

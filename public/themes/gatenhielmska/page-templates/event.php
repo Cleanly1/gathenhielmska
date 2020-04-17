@@ -77,7 +77,7 @@ if (isset($_GET['cat'])) {
     <ul class="filters">
         <a class="filters_items <?php echo $category == "" ? "active" : "" ?>" href="?cat="> Alla </a>
         <?php foreach ($terms as $term) : ?>
-            <a class="filters_items <?php echo $category == $term->slug ? "active" : "" ?>" href="?cat=<?php echo $term->slug ?>"><span class="hideOnDesktop">/</span> <?php echo $term->name ?> </a>
+            <a class="filters_items <?php echo $category == $term->slug ? "active" : "" ?>" href="?cat=<?php echo $term->slug ?>"><span class="hide_on_desktop_event">/</span> <?php echo $term->name ?> </a>
         <?php
             $totalEvents += $term->count;
         endforeach;
@@ -104,18 +104,18 @@ if (isset($_GET['cat'])) {
                             <p class="event_date">/ <?php echo "$eventDate[0] $eventDate[1]" ?> / <?php the_field('event_start_time') ?></p>
                             <?php if (get_the_terms($post, 'event_type') != false) : ?>
                                 <?php foreach (get_the_terms($post, 'event_type') as $eventType) : ?>
-                                    <a class="event_tag showOnDesktop" href="?cat=<?php echo $eventType->slug ?>"> <?php echo $eventType->name ?></a>
+                                    <a class="event_tag show_on_desktop" href="?cat=<?php echo $eventType->slug ?>"> <?php echo $eventType->name ?></a>
                                 <?php endforeach; ?>
                             <?php endif; ?>
-                            <p class="event_location showOnDesktop">/ <?php the_field('location') ?></p>
+                            <p class="event_location show_on_desktop">/ <?php the_field('location') ?></p>
                         </div>
                     </div>
-                    <div class="event_footer showOnDesktop">
+                    <div class="event_footer show_on_desktop">
                         <p class="event_desc"><?php the_field('event_sum') ?></p>
                         <a class="event_button" href="<?php the_permalink() ?>">Läs mer</a>
                     </div>
-                    <p class="event_desc hideOnDesktop"><?php the_field('event_sum') ?></p>
-                    <a class="event_button hideOnDesktop" href="<?php the_permalink() ?>">Läs mer</a>
+                    <p class="event_desc hide_on_desktop_event"><?php the_field('event_sum') ?></p>
+                    <a class="event_button hide_on_desktop_event" href="<?php the_permalink() ?>">Läs mer</a>
                 </div>
             </div>
         <?php

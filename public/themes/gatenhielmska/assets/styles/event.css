@@ -20,7 +20,7 @@
 .filters_items:hover {
   text-decoration: none;
   font-weight: 500;
-  color: black;
+  color: var(--grey);
 }
 .filters_container {
   text-align: center;
@@ -219,6 +219,7 @@
 .page_header_program div:last-child {
   position: absolute;
   bottom: 10px;
+  left: -10px;
   width: 100%;
   height: 60%;
   background-image: url("./../images/bird1.png");
@@ -238,7 +239,7 @@
   font-weight: bold;
 }
 
-.showOnDesktop {
+.show_on_desktop {
   display: none;
 }
 
@@ -249,17 +250,17 @@
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-evenly;
-    align-items: space-between;
+    align-items: center;
+    font-size: 16px;
   }
   .filters_items {
     color: var(--white);
-    font-size: 13px;
+    font-size: 16px;
     margin: 0 calc(100vw/24);
+    text-decoration: none;
   }
   .filters_items:hover {
-    text-decoration: none;
-    font-weight: 700;
-    color: var(--white);
+    color: var(--grey);
   }
   .filters_container {
     display: flex;
@@ -303,6 +304,7 @@
   .event_header {
     flex-flow: column nowrap;
     width: 48vw;
+    min-width: 0;
   }
   .event_title {
     display: flex;
@@ -351,7 +353,7 @@
     margin-bottom: 20px;
   }
   .event_button {
-    position: relative;
+    align-self: center;
     margin: 0 20px;
     padding: 5px 23px;
     max-height: 20px;
@@ -359,9 +361,10 @@
   .event_footer {
     display: flex;
     flex-flow: row nowrap;
-    align-items: center;
+    align-items: flex-start;
     margin: 30px 0;
     width: 100%;
+    height: auto;
   }
 
   .preview_container {
@@ -453,7 +456,7 @@
     margin: 0;
   }
 
-  .hideOnDesktop {
+  .hide_on_desktop_event {
     display: none;
   }
 }
