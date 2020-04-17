@@ -305,7 +305,7 @@
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-between;
-    width: 48vw;
+    width: 46vw;
     height: 80vh;
     background: rgba(255, 255, 255, 0.3);
     margin: 1vw;
@@ -330,14 +330,14 @@
         display: flex;
         align-items: center;
         overflow: hidden;
-        width: 48vw;
+        width: 46vw;
         height: 41.5%;
       }
     }
 
     &_header {
       flex-flow: column nowrap;
-      width: 48vw;
+      width: 46vw;
       min-width: 0;
     }
 
@@ -377,7 +377,7 @@
       justify-content: flex-start;
       align-items: flex-start;
       position: static;
-      width: 48vw;
+      width: 46vw;
       height: 40vh;
       margin: 0 0 auto 0;
       padding: 0;
@@ -414,9 +414,9 @@
   .preview{
 
     &_container{
-      padding: 4vh 0 0 0;
+      padding: 4vh 1vw 0 1vw;
       min-height: 30vh;
-      width: 100vw;
+      width: 98vw;
       display: flex;
       flex-flow: row wrap;
       background-color: var(--grey);
