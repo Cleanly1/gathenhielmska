@@ -62,6 +62,7 @@ function add_theme_caps()
 
     $inhouse = get_role('inhouse');
     $inhouse->add_cap('can_edit_posts');
+    $inhouse->add_cap('read');
 }
 add_action('admin_init', 'add_theme_caps');
 
