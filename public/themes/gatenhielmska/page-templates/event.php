@@ -67,11 +67,11 @@ if (isset($_GET['cat'])) {
 }
 
 ?>
-<div class="page_header_program">
-    <div></div>
-    <h2>Program</h2>
-    <div></div>
-</div>
+ <div class="page-header-gallery">
+        <div></div>
+        <h2>Program</h2>
+        <div></div>
+    </div>
 <div class="filters_container">
     Filter /
     <ul class="filters">
