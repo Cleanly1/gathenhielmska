@@ -103,6 +103,7 @@ body {
 .slider-menu ul li a {
   color: var(--darkBlue);
   text-transform: uppercase;
+  font-family: Roboto Condensed;
 }
 .menu-slider-open {
   left: 0;
@@ -196,6 +197,7 @@ body {
     padding: 10px;
   }
   .desktop-menu ul li a {
+    font-family: Roboto Condensed;
     color: black;
     text-transform: uppercase;
   }

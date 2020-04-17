@@ -21,13 +21,13 @@
   position: absolute;
   font-style: normal;
   font-weight: bold;
-  font-size: 24px;
+  font-size: 28px;
   line-height: 29px;
 }
 .history-grid-content p {
   font-style: normal;
   font-weight: lighter;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 24px;
   margin-left: 70px;
 }
