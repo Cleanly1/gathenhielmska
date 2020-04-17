@@ -142,8 +142,8 @@
 }
 .front_page_event_image {
   position: relative;
-  width: 100%;
-  height: initial;
+  width: auto;
+  height: 100%;
   opacity: 0.8;
 }
 .front_page_event_image_container {
@@ -383,11 +383,12 @@
   .front_page_walls_info_title {
     color: var(--white);
     font-weight: bold;
-    font-size: 24px;
+    font-size: 32px;
     line-height: 29px;
   }
   .front_page_walls_info_text {
     color: var(--white);
+    font-size: 26px;
   }
   .front_page_walls_image {
     width: 100%;

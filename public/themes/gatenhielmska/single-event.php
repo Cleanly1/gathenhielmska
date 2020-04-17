@@ -1,9 +1,9 @@
 <?php get_header(); ?>
-<div class="page_header_program">
-    <div></div>
-    <h2>Program</h2>
-    <div></div>
-</div>
+<div class="page-header-gallery">
+        <div></div>
+        <h2>Program</h2>
+        <div></div>
+    </div>
 <?php if (have_posts()) : ?>
 
     <?php while (have_posts()) : the_post();
