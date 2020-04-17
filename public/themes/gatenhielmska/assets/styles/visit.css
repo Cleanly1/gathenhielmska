@@ -42,6 +42,8 @@
   margin-top: 15px;
   border-radius: 40px;
   border: none;
+  padding-top: 3px;
+  font-size: 14px;
 }
 #visit-img-1 {
   width: 100%;
@@ -130,7 +132,7 @@
     font-style: normal;
     display: flex;
     align-items: center;
-    padding: 4em;
+    padding: 4em 25%;
   }
 
   .visit-text-img h3 {

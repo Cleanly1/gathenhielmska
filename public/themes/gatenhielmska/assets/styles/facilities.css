@@ -20,6 +20,11 @@
 }
 .facilities-book-room h3 {
   margin-top: 180px;
+  color: var(--darkBlue);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 29px;
 }
 .facilities-container button {
   width: 90px;
@@ -83,7 +88,6 @@
   font-size: 28px;
   line-height: 29px;
   text-transform: capitalize;
-
   order: 0;
   align-self: center;
   margin: 0px 20px;
@@ -107,9 +111,9 @@
     height: 250px;
   }
   .facilities-book-room h3 {
-    margin-top: 100px;
+    margin-top: 90px;
     color: var(--darkBlue);
-    font-size: 23px;
+    font-size: 27px;
     font-weight: bold;
   }
   .facilities-container button {
@@ -143,6 +147,9 @@
     grid-column-start: 1;
     grid-row-start: 6;
   }
+  .facilities-about-text div {
+    padding: 0px 20%;
+  }
   .facilities-about-text p {
     color: black;
     padding: 1.2em;
@@ -161,6 +168,9 @@
     background-color: var(--darkGrey);
     color: white;
   }
+  .facilities-bookinginformation div {
+    padding: 0px 20%;
+  }
   .facilities-bookinginformation h3 {
     margin-top: 40px;
     font-style: normal;
@@ -175,6 +185,7 @@
     font-size: 20px;
     line-height: 27px;
     padding: 0px 160px 30px 160px;
+    text-align: center;
   }
   .facilities-bookinginformation button {
     width: 130px;
