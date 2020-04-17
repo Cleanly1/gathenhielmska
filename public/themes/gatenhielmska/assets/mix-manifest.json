@@ -1,3 +1,5 @@
 {
-    "/styles/app.css": "/styles/app.css"
+    "/styles/app.css": "/styles/app.css",
+    "/styles/event.css": "/styles/event.css",
+    "/styles/footer.css": "/styles/footer.css"
 }

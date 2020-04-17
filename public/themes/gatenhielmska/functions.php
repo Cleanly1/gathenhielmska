@@ -43,6 +43,7 @@ add_action('wp_enqueue_scripts', function () {
     wp_enqueue_script('information-btn-visit', get_template_directory_uri() . '/assets/scripts/information-btn-activity.js');
     wp_enqueue_script('information-btn-history', get_template_directory_uri() . '/assets/scripts/information-btn-history.js');
     wp_enqueue_script('navbar', get_template_directory_uri() . '/assets/scripts/navbar.js', false, false, true);
+    wp_enqueue_script('footer', get_template_directory_uri() . '/assets/scripts/footer.js', false, false, true);
 });
 
 function add_google_fonts()

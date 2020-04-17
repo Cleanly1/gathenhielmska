@@ -11,6 +11,18 @@
   font-weight: normal;
   color: white;
 
+  &_back_to_top {
+    position: absolute;
+    top: -20px;
+    left: calc(50vw - 20px);
+    width: 40px;
+    cursor: pointer;
+    z-index: 3;
+    &_container {
+      position: relative;
+    }
+  }
+
   &_logo {
     width: 17vw;
     margin: 0;
@@ -73,7 +85,7 @@
   &_info {
     color: white;
     font-size: 12px;
-    margin: 0 1.5vw;
+    margin: 0 0.9vw;
 
     &:hover{
       color: gainsboro;

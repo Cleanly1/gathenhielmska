@@ -11,28 +11,34 @@
   font-weight: normal;
   color: white;
 }
-
+.footer_back_to_top {
+  position: absolute;
+  top: -20px;
+  left: calc(50vw - 20px);
+  width: 40px;
+  cursor: pointer;
+  z-index: 3;
+}
+.footer_back_to_top_container {
+  position: relative;
+}
 .footer_logo {
   width: 17vw;
   margin: 0;
 }
-
 .footer_parts {
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-end;
-  width: calc(100vw / 3);
+  width: calc(100vw/3);
 }
-
 .footer_parts:first-child {
   padding: 0 0 10px 40px;
 }
-
 .footer_parts:nth-child(2) {
   justify-content: flex-end;
   align-items: center;
 }
-
 .footer_list {
   list-style: none;
   margin: 0;
@@ -40,49 +46,39 @@
   margin-bottom: 20px;
   margin-left: 6vw;
 }
-
 .footer_list_item {
   font-size: 16px;
   margin: 0 10px 10px 0;
 }
-
 .footer_list_item a {
   color: white;
 }
-
 .footer_list_item a:hover {
   color: gainsboro;
 }
-
 .footer_copy {
   margin: 0;
   margin-left: 6vw;
   line-height: 40px;
 }
-
 .footer_social {
   margin: 0 0 18px 0;
   padding: 0;
 }
-
 .footer_social_item {
   margin: 2vw;
 }
-
 .footer_social_item_images {
   width: 50px;
 }
-
 .footer_info {
   color: white;
   font-size: 12px;
-  margin: 0 1.5vw;
+  margin: 0 0.9vw;
 }
-
 .footer_info:hover {
   color: gainsboro;
 }
-
 .footer_flower {
   width: 30vw;
   align-self: flex-end;
@@ -94,68 +90,58 @@
 
 @media only screen and (max-width: 1024px) {
   .footer {
+    font-family: Avenir Next Condensed;
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
     padding: 20px 0;
   }
-
   .footer_parts {
     position: static;
     width: 50vw;
     padding: 0;
     z-index: 2;
   }
-
   .footer_parts:first-child {
     padding: 0;
   }
-
   .footer_parts:nth-child(3) {
     display: flex;
     flex-flow: row nowrap;
     padding: 0;
   }
-
   .footer_list {
     list-style: none;
     margin: auto 0 auto 10vw;
     padding: 0;
   }
-
   .footer_list_item {
     font-size: 16px;
     margin: 3vh 0;
   }
-
   .footer_social {
     display: flex;
     flex-flow: column nowrap;
     margin: auto 0;
     padding: 5vh 0 5vh 5vw;
   }
-
   .footer_social_item {
     color: white;
     font-size: 16px;
     text-decoration: underline;
     margin: 1.5vh 0;
   }
-
   .footer_social_item:hover {
     color: gainsboro;
   }
-
   .footer_logo {
     display: none;
   }
-
   .footer_flower {
     width: 40vw;
     align-self: auto;
     transform: rotateY(180deg);
   }
-
   .footer_copy {
     align-self: center;
   }
@@ -168,29 +154,23 @@
     display: flex;
   }
 }
-
 @media only screen and (max-width: 425px) {
   .footer {
     flex-flow: column nowrap;
-    background-image: url("../images/waveFooter.svg");
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: contain;
   }
-
   .footer_parts {
     width: 100vw;
   }
-
   .footer_list {
     margin: auto 0 auto 15vw;
   }
-
   .footer_list_item {
     font-size: 16px;
     margin: 3vh 0;
   }
-
   .footer_social {
     display: flex;
     flex-flow: column nowrap;
@@ -198,16 +178,13 @@
     margin: 0;
     padding: 5vh 0 5vh 15vw;
   }
-
   .footer_social_item {
     font-size: 16px;
     margin: 1.5vh 0;
   }
-
   .footer_flower {
     width: 70vw;
   }
-
   .footer_wave {
     position: absolute;
     margin: 0;

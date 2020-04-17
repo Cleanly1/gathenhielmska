@@ -1,3 +1,6 @@
+<div class="footer_back_to_top_container">
+    <img class="footer_back_to_top" src="<?php echo get_template_directory_uri() ?>/assets/images/arrow-up.svg" alt="">
+</div>
 <div class="footer">
     <div class="footer_parts">
         <img class="footer_logo" src="/themes/gatenhielmska/assets/images/gathenhielmskaLogo.svg" alt="">

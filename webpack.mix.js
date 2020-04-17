@@ -21,9 +21,9 @@ mix.setPublicPath(`public/themes/${theme}/assets`);
 // mix.js("resources/scripts/app.js", "scripts");
 mix
   .sass("resources/styles/app.scss", "styles")
-  // .sass("resources/styles/components/event.scss", "styles")
+  .sass("resources/styles/components/event.scss", "styles")
   // .sass("resources/styles/front-page.scss", "styles")
-  // .sass("resources/styles/components/footer.scss", "styles")
+  .sass("resources/styles/components/footer.scss", "styles")
   .options({
     processCssUrls: false
   });

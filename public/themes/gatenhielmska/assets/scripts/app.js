@@ -93,9 +93,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-var footer = window.innerHeight;
-var footerWave = document.querySelector(".footer_wave");
-console.log(footerWave);
+
 
 /***/ }),
 
@@ -110,21 +108,10 @@ console.log(footerWave);
 
 /***/ }),
 
-/***/ "./resources/styles/components/event.scss":
-/*!************************************************!*\
-  !*** ./resources/styles/components/event.scss ***!
-  \************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
-/***/ "./resources/styles/front-page.scss":
-/*!******************************************!*\
-  !*** ./resources/styles/front-page.scss ***!
-  \******************************************/
+/***/ "./resources/styles/components/footer.scss":
+/*!*************************************************!*\
+  !*** ./resources/styles/components/footer.scss ***!
+  \*************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -133,16 +120,15 @@ console.log(footerWave);
 /***/ }),
 
 /***/ 0:
-/*!************************************************************************************************************************************************!*\
-  !*** multi ./resources/scripts/app.js ./resources/styles/app.scss ./resources/styles/front-page.scss ./resources/styles/components/event.scss ***!
-  \************************************************************************************************************************************************/
+/*!**************************************************************************************************************!*\
+  !*** multi ./resources/scripts/app.js ./resources/styles/app.scss ./resources/styles/components/footer.scss ***!
+  \**************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! /Users/oskar/Desktop/Yrgo/Projekt/gathenhielmska/resources/scripts/app.js */"./resources/scripts/app.js");
 __webpack_require__(/*! /Users/oskar/Desktop/Yrgo/Projekt/gathenhielmska/resources/styles/app.scss */"./resources/styles/app.scss");
-__webpack_require__(/*! /Users/oskar/Desktop/Yrgo/Projekt/gathenhielmska/resources/styles/front-page.scss */"./resources/styles/front-page.scss");
-module.exports = __webpack_require__(/*! /Users/oskar/Desktop/Yrgo/Projekt/gathenhielmska/resources/styles/components/event.scss */"./resources/styles/components/event.scss");
+module.exports = __webpack_require__(/*! /Users/oskar/Desktop/Yrgo/Projekt/gathenhielmska/resources/styles/components/footer.scss */"./resources/styles/components/footer.scss");
 
 
 /***/ })
